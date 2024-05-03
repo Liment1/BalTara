@@ -1,10 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./desktop4.css";
 
-function Desktop1() {
-    return(
-        <div className="desktop1">
-            <h1>Home</h1>
-        </div>
-    )
+function Desktop4() {
+  return (
+    <div className="desktop4">
+      <h1>Support Us</h1>
+      <div className="name">
+        <input
+          className="nameisi"
+          type="text"
+          placeholder="Type Your Name....."
+        ></input>
+      </div>
+      <div className="suggestions">
+        <textarea
+          className="suggestionsisi"
+          type="text"
+          placeholder="Enter Suggestions and Critics"
+        ></textarea>
+      </div>
+      <div className="btnsub">
+        <button className="btn btn-outline-secondary">Submit</button>
+      </div>
+    </div>
+  );
 }
+
+export default Desktop4;
