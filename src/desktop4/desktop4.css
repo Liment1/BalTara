@@ -1,0 +1,38 @@
+.nameisi {
+  color: white !important;
+  background-color: rgb(76, 76, 76);
+  border-radius: 15px;
+  padding: 20px;
+  width: 50%;
+  min-height: 80px;
+}
+
+.nameisi::placeholder {
+  color: white;
+}
+
+.suggestionsisi {
+  color: white !important;
+  background-color: rgb(76, 76, 76);
+  border-radius: 20px;
+  padding: 20px;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  min-height: 200px;
+  resize: both;
+}
+
+.suggestionsisi::placeholder {
+  color: white;
+  display: flex;
+}
+
+.btnsub {
+  text-align: end;
+}
+
+.btn {
+  height: 50px;
+  border-radius: 10px;
+}
