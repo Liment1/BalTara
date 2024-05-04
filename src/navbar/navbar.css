@@ -1,0 +1,233 @@
+.btn {
+    position: fixed;
+    background-color: rgba(32, 30, 30, 1);
+}
+
+.offcanvas {
+    background-color: rgba(32, 30, 30, 0.8); 
+    color: white; 
+    width: 300px;
+}
+
+.logo img{
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.custom-offcanvas {
+    max-width: 200px; 
+}
+
+.offcanvas-header.logo {
+    width: 100%; 
+    margin-top: 20px;
+}
+
+.offcanvas-header.logo img {
+    width: 40px; 
+    margin: 0 auto; 
+    display: block;
+}
+
+.offcanvas-header .offcanvas-title {
+    text-align: center; 
+    font-size: 30px;
+    margin-top: 10px;
+    font-family: 'Biryani', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.offcanvas-header .btn-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.custom-search {
+    background-color: rgba(32, 30, 30, 0.8); 
+    border: none; 
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); 
+}
+
+.custom-search::placeholder{
+    color: white;
+}
+
+.offcanvas-body h3{
+    text-align: center;
+}
+
+/* Home */
+.mainmenu .btn-home {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 0px; 
+}
+
+.mainmenu .btn-home img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.mainmenu .btn-home span {
+    font-size: 14px;
+    color: white;
+    margin-left: 2vh;
+}
+
+.btn-home span:hover{
+    text-decoration: underline;
+}
+
+/* Foods */
+.mainmenu .btn-foods {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 60px; /* Larger margin-top */
+}
+
+.mainmenu .btn-foods img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.mainmenu .btn-foods span {
+    font-size: 14px;
+    color: white;
+    margin-left: 2vh;
+}
+
+.btn-foods span:hover{
+    text-decoration: underline;
+}
+
+/* About Us */
+.mainmenu .btn-abtus {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 110px; /* Larger margin-top */
+}
+
+.mainmenu .btn-abtus img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.mainmenu .btn-abtus span {
+    font-size: 14px;
+    color: white;
+    margin-left: 2vh;
+}
+
+.btn-abtus span:hover{
+    text-decoration: underline;
+}
+
+/* Support */
+.support .btn-support {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 190px;
+}
+
+.support .btn-support img {
+    width: 30px;
+    height: 30px;
+    margin-right: 5px;
+}
+
+.support .btn-support span {
+    font-size: 14px;
+    color: white;
+    margin-left: 2vh;
+}
+
+.btn-support span:hover{
+    text-decoration: underline;
+}
+
+.logo2 img{
+    width: 40px;
+    height: 40px;
+    margin-left: 50px;
+}
+
+/* iconbali */
+.btn-secondary img{
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+.btn-secondary {
+    background-color: rgba(32, 30, 30, 0.5);
+}
+
+@media (max-width: 768px) {
+    .offcanvas {
+        width: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .offcanvas {
+        width: 200px;
+    }
+
+    .logo img{
+        width: 40px;
+        height: 40px;
+        margin-right: 15px;
+        margin-top: 5px;
+    }
+
+    .offcanvas-header .offcanvas-title {
+        font-size: 20px;
+        margin-top: 5px;
+    }
+
+    .custom-search {
+        border-radius: 15px;
+    }
+
+    .mainmenu .btn-home img,
+    .mainmenu .btn-foods img,
+    .mainmenu .btn-abtus img,
+    .support .btn-support img {
+        width: 25px;
+        height: 25px;
+    }
+
+    .mainmenu .btn-home span,
+    .mainmenu .btn-foods span,
+    .mainmenu .btn-abtus span,
+    .support .btn-support span {
+        font-size: 12px;
+    }
+}

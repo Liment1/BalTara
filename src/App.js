@@ -1,7 +1,7 @@
 
 import './App.css';
 import Desktop1 from './desktop1/desktop1.js';
-import Bar from './navbar.js'
+import Bar from './navbar/navbar.js'
 
 function App() {
   return (
