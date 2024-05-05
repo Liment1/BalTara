@@ -23,12 +23,16 @@
     text-align: center;
 }
 
+.baltaraText {
+    transition: opacity 0.9s ease-in-out;
+}
+
 .desktop1 {
     background-image: url('bali3.png');
-    background-size: cover; /* Mengatur latar belakang untuk menutupi seluruh area kontainer */
-    background-position: center; /* Pusatkan latar belakang */
-    width: 100%; /* Menggunakan lebar 100% untuk kontainer */
-    height: auto; /* Mengatur tinggi agar responsif */
+    background-size: cover; 
+    background-position: center; 
+    width: 100%; 
+    height: auto; 
     position: absolute;
     top: 0;
     left: 0;
@@ -69,7 +73,6 @@
     position: relative;
     width: 80%;
     padding-top: 56.25%; 
-    margin-bottom: 40px;
     margin-left: 10%;
 }
 
@@ -79,6 +82,7 @@
     left: 0;
     width: 100%;
     height: 100%; 
+    
 }
 
 .desc{
@@ -94,19 +98,19 @@
         transform: translateY(0);
     }
     50% {
-        transform: translateY(-10px); /* Ubah jarak sesuai keinginan Anda */
+        transform: translateY(-10px);
     }
 }
 
 .desc h2 {
-    animation: moveUpDown 2s infinite; /* Ubah durasi animasi sesuai kebutuhan Anda */
+    animation: moveUpDown 2s infinite;
 }
 
 
 @media (max-width: 768px) {
     .video-container,
     .desc {
-        width: 100%; /* Menyesuaikan lebar dengan layar kecil */
+        width: 100%; 
     }
 
     .judul {
@@ -118,27 +122,27 @@
     }
 
     .footer img {
-        max-width: 100%; /* Membuat gambar maksimum 100% dari lebar parent */
-        height: auto; /* Mengatur tinggi gambar agar proporsional dengan lebar */
+        max-width: 100%; 
+        height: auto; 
     }
 
     .footer video {
-        max-width: 100%; /* Membuat video maksimum 100% dari lebar parent */
-        height: auto; /* Mengatur tinggi video agar proporsional dengan lebar */
+        max-width: 100%; 
+        height: auto;
     }
 }
 
 
 .slide {
     position: relative;
-    margin-top: 10px; /* Adjust spacing as needed */
+    margin-top: 10px; 
     height: auto;
     overflow: hidden;
 }
 
 .pic1 {
     display: flex;
-    transition: transform 0.5s ease; /* Add smooth transition for slide effect */
+    transition: transform 0.5s ease; 
 }
 
 .pic1 img {
@@ -149,14 +153,14 @@
 
 .slide2 {
     position: relative;
-    margin-top: 10px; /* Adjust spacing as needed */
+    margin-top: 10px; 
     height: auto;
     overflow: hidden;
 }
 
 .pic2 {
     display: flex;
-    transition: transform 0.5s ease; /* Add smooth transition for slide effect */
+    transition: transform 0.5s ease; 
 }
 
 .pic2 img {
@@ -167,27 +171,27 @@
 
 @media (max-width: 768px) {
     .pic2 img {
-        height: auto; /* Adjust for smaller screens */
+        height: auto; 
     }
 }
 
 
 @media (max-width: 768px) {
     .pic1 img {
-        height: auto; /* Adjust for smaller screens */
+        height: auto; 
     }
 }
 
 .slide3 {
     position: relative;
-    margin-top: 10px; /* Adjust spacing as needed */
+    margin-top: 10px;
     height: auto;
     overflow: hidden;
 }
 
 .pic3 {
     display: flex;
-    transition: transform 0.5s ease; /* Add smooth transition for slide effect */
+    transition: transform 0.5s ease; 
 }
 
 .pic3 img {
@@ -198,7 +202,7 @@
 
 @media (max-width: 768px) {
     .pic3 img {
-        height: auto; /* Adjust for smaller screens */
+        height: auto; 
     }
 }
 
@@ -208,9 +212,11 @@
     width: 100%;
     height: auto;
     object-fit: cover;
-    max-height: 200px; /* Sesuaikan tinggi maksimum gambar */
-    margin-bottom: 10px; /* Tambahkan margin bawah untuk jarak antar gambar */
+    max-height: 200px;
+    margin-bottom: 30px;
+    animation: fade 3s ease-in-out; /* Terapkan animasi fade */
 }
+
 
 .highlight p{
     text-align: center;
@@ -219,4 +225,34 @@
     color: white;
     font-weight: bold;
     text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
+    margin-bottom: 40px;
 }
+
+@keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+.bgfooter1{
+    background-color: #2d2827;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.bgfooter2{
+    background-color: #2d2827;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.bgfooter3{
+    background-color: #2d2827;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+  
