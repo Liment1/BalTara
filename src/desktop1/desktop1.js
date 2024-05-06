@@ -20,12 +20,21 @@ function Desktop1() {
     const slides = [nascam, babigul, ayambetu, satelilit];
     const slides2 = [lawar2, matah1, bebekgor, satebab];
     const slides3 = [tipatblayag, tepeng2, sateplecing, sambalembe];
+    const [baltaraText, setBaltaraText] = useState("Bali Nusantara");
 
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide(prevSlide => (prevSlide + 1) % slides.length);
         }, 3000);
-        return () => clearInterval(interval);
+        
+        const textInterval = setInterval(() => {
+            setBaltaraText(prevText => prevText === "Bali Nusantara" ? "बाली द्वीपसमूह" : "Bali Nusantara");
+        }, 3000);
+
+        return () => {
+            clearInterval(interval);
+            clearInterval(textInterval);
+        };
     }, [slides.length]);
 
     return (
@@ -34,8 +43,8 @@ function Desktop1() {
                 <div className="judul">
                     <b><h1>Home</h1></b>
                 </div>
-                <div className="baltara">
-                    <p>Bali Nusantara</p>
+                <div className="baltara" style={{ cursor: "default" }}>
+                    <p className="baltaraText">{baltaraText}</p>
                 </div>
                 <div className="video">
                     <div className="row mt-1">
@@ -55,7 +64,7 @@ function Desktop1() {
                     <div className="highlight">
                     <p>Highlight</p>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 bgfooter1">
                         <div className="slide">
                             <div className="pic1">
                                 {slides.map((slide, index) => (
@@ -64,7 +73,7 @@ function Desktop1() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 bgfooter2">
                         <div className="slide2">
                             <div className="pic2">
                                 {slides2.map((slide, index) => (
@@ -73,7 +82,7 @@ function Desktop1() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4 bgfooter3">
                         <div className="slide3">
                             <div className="pic3">
                                 {slides3.map((slide, index) => (
