@@ -5,7 +5,8 @@ import "./desktop4.css";
 function Desktop4() {
   return (
     <div className="desktop4">
-      <h1>Support Us</h1>
+      <h1 className="judulsupport">Support Us</h1>
+
       <div className="name">
         <input
           className="nameisi"
@@ -20,8 +21,8 @@ function Desktop4() {
           placeholder="Enter Suggestions and Critics"
         ></textarea>
       </div>
-      <div className="btnsub">
-        <button className="btn btn-outline-secondary">Submit</button>
+      <div className="tampungbutton">
+        <button className="buttonsub">Submit</button>
       </div>
     </div>
   );
