@@ -32,15 +32,9 @@ function Desktop1() {
       );
     }, 3000);
 
-    return () => {
-      clearInterval(interval);
-      clearInterval(textInterval);
-    };
-  }, [slides.length]);
-
-  return (
-    <div className="desktop1">
-      <div className="container">
+    return (
+      <div className="desktop1">
+        {/* <div className="container"> */}
         <div className="judul">
           <b>
             <h1>Home</h1>
@@ -129,8 +123,9 @@ function Desktop1() {
           </div>
         </div>
       </div>
-    </div>
-  );
+      // </div>
+    );
+  });
 }
 
 export default Desktop1;
