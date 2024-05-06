@@ -15,26 +15,31 @@ import sateplecing from "./sateplecing.jpg";
 import sambalembe from "./sambalembe.jpg";
 
 function Desktop1() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [nascam, babigul, ayambetu, satelilit];
-  const slides2 = [lawar2, matah1, bebekgor, satebab];
-  const slides3 = [tipatblayag, tepeng2, sateplecing, sambalembe];
-  const [baltaraText, setBaltaraText] = useState("Bali Nusantara");
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
-    }, 3000);
-
-    const textInterval = setInterval(() => {
-      setBaltaraText((prevText) =>
-        prevText === "Bali Nusantara" ? "बाली द्वीपसमूह" : "Bali Nusantara"
-      );
-    }, 3000);
-
+    const [currentSlide, setCurrentSlide] = useState(0);
+    const slides = [nascam, babigul, ayambetu, satelilit];
+    const slides2 = [lawar2, matah1, bebekgor, satebab];
+    const slides3 = [tipatblayag, tepeng2, sateplecing, sambalembe];
+    const [baltaraText, setBaltaraText] = useState("Bali Nusantara");
+  
+    useEffect(() => {
+      const interval = setInterval(() => {
+        setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
+      }, 3000);
+  
+      const textInterval = setInterval(() => {
+        setBaltaraText((prevText) =>
+          prevText === "Bali Nusantara" ? "बाली द्वीपसमूह" : "Bali Nusantara"
+        );
+      }, 3000);
+  
+      return () => {
+        clearInterval(interval);
+        clearInterval(textInterval);
+      };
+    }, []);
+  
     return (
       <div className="desktop1">
-        {/* <div className="container"> */}
         <div className="judul">
           <b>
             <h1>Home</h1>
@@ -123,9 +128,8 @@ function Desktop1() {
           </div>
         </div>
       </div>
-      // </div>
     );
-  });
-}
-
-export default Desktop1;
+  }
+  
+  export default Desktop1;
+  
