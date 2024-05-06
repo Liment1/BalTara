@@ -39,7 +39,7 @@ function Desktop1() {
 
     return (
         <div className="desktop1">
-            <div className="container">
+            {/* <div className="container"> */}
                 <div className="judul">
                     <b><h1>Home</h1></b>
                 </div>
@@ -93,7 +93,7 @@ function Desktop1() {
                     </div>
                 </div>
             </div>
-        </div>
+        // </div>
     );
 }
 
