@@ -5,6 +5,7 @@ body {
 .btn {
     position: fixed;
     background-color: rgba(32, 30, 30, 1);
+    margin-top: 100px;
 }
 
 .offcanvas {
@@ -234,4 +235,29 @@ body {
     .support .btn-support span {
         font-size: 12px;
     }
+}
+
+.musik-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.musik {
+    background-color: #222831;
+    margin-top: 20px;
+    margin-left: 25px; 
+    color: white;
+}
+
+.musik:hover{
+    background-color: black;
+}
+
+.mainmenu {
+    margin-top: 10px; 
+}
+
+.menu{
+    margin-top: 70px;
 }
