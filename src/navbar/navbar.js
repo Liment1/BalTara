@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Navbar, Nav, Offcanvas, Button, Dropdown } from 'react-bootstrap';
+import { Offcanvas } from 'react-bootstrap';
 import './navbar.css';
 import pura from "./bali.png";
 import home from "./home.png";
@@ -7,27 +7,48 @@ import foods from "./restaurant.png";
 import abtus from "./abtus.png";
 import support from "./support.png";
 import iconbali from "./iconbali.png";
+import music from "./ratuanom.mp3";
 
 function App() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
+  const [isMusicPlaying, setIsMusicPlaying] = useState(true); // State untuk menentukan apakah musik sedang diputar atau tidak
 
-  const handleOffcanvasToggle = () => setShowOffcanvas(!showOffcanvas);
+  const handleOffcanvasToggle = () => {
+    setShowOffcanvas(!showOffcanvas);
+  };
+
+  const handleOffcanvasClose = () => {
+    setShowOffcanvas(false);
+  };
+
+  const toggleMusic = () => {
+    setIsMusicPlaying(!isMusicPlaying);
+    const audioPlayer = document.getElementById('audioPlayer'); // Dapatkan elemen audio menggunakan ID
+    if (isMusicPlaying) {
+      audioPlayer.pause(); // Jika sedang diputar, jeda musik
+    } else {
+      audioPlayer.play(); // Jika sedang dijeda, mainkan musik
+    }
+  };
 
   return (
     <div className="jancoks">
-      <button className="btn btn-secondary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-        <img src={iconbali} alt="iconbali" />
-      </button>
+      {!showOffcanvas && ( 
+        <button className="btn btn-secondary" type="button" onClick={handleOffcanvasToggle}>
+          <img src={iconbali} alt="iconbali" />
+        </button>
+      )}
 
-      <div className="offcanvas offcanvas-start rounded-end-4 custom-offcanvas" data-bs-scroll="true" data-bs-backdrop="false" tabIndex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-        <div className="offcanvas-header logo">
-          <img src={pura} alt="Bali Temple" className="img-fluid" />
-          <h5 className="offcanvas-title text-center text-sm">BalTara</h5>
-          <button type="button" className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div className="offcanvas-body">
-          <input type="search" className="form-control custom-search mb-3" placeholder="Search..." />
-          <h3 className="text-center text-sm">Main Menu</h3>
+      <Offcanvas show={showOffcanvas} onHide={handleOffcanvasClose} placement="start" style={{ width: '200px' }}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>BalTara</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          <button className="btn  musik" onClick={toggleMusic}>
+            {isMusicPlaying ? "Pause Music" : "Play Music"}
+          </button>
+          <audio id="audioPlayer" src={music} autoPlay loop /> 
+          <h3 className="text-center text-sm menu">Main Menu</h3>
           <hr />
           <div className="d-grid">
             <div className="mainmenu">
@@ -62,10 +83,10 @@ function App() {
           <br />
           <hr />
           <div className="logo2">
-            <img src={pura}></img>
+            <img src={pura} alt="Bali Temple" />
           </div>
-        </div>
-      </div>
+        </Offcanvas.Body>
+      </Offcanvas>
     </div>
   );
 }

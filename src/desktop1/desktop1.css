@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body{
@@ -12,7 +11,7 @@ body{
 }
 
 .judul {
-    font-size: 4vw; 
+    font-size: 4vw; /* Ukuran font responsif */
     margin-top: 3vh; 
     color: white;
     text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5); 
@@ -25,12 +24,15 @@ body{
 }
 
 .baltara {
-    font-size: 6vw; 
-    color: white;
+    font-size: 6vw; /* Ukuran font responsif */
+    /* color: white; */
     text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5); 
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     text-align: center;
+    background: -webkit-linear-gradient(#6f6f6f, #bc9f3f);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .baltaraText {
@@ -81,6 +83,9 @@ body{
 }
 
 .video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: relative;
     width: 80%;
     padding-top: 56.25%; 
@@ -102,6 +107,7 @@ body{
     margin-top: 20px;
     text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5); 
     width: 90%; 
+    
 }
 
 @keyframes moveUpDown {
@@ -119,9 +125,13 @@ body{
 
 
 @media (max-width: 768px) {
-    .video-container,
+    .video-container{
+        margin-right: 15px;
+    }
+
     .desc {
         width: 100%; 
+        font-size: 12px;
     }
 
     .judul {
@@ -225,18 +235,18 @@ body{
     object-fit: cover;
     max-height: 200px;
     margin-bottom: 30px;
-    animation: fade 3s ease-in-out; /* Terapkan animasi fade */
+    animation: fade 3s ease-in-out; 
 }
 
 
 .highlight p{
+    font-size: 4vw; /* Ukuran font responsif */
     text-align: center;
     font-family: 'Poppins', sans-serif;
-    font-size: 50px;
     color: white;
     font-weight: bold;
     text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
-    margin-bottom: 40px;
+    margin-bottom: 2vh; /* Ruang bawah antara teks */
 }
 
 @keyframes fade {
@@ -250,20 +260,61 @@ body{
 
 .bgfooter1{
     background-color: #2d2827;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
+    /* border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    height: 48vh;
+    
+}
+
+@media (max-width: 768px) {
+    .bgfooter1{
+        height: 27vh; 
+        max-width: 70%;
+        margin-left: 60px;
+    }
 }
 
 .bgfooter2{
     background-color: #2d2827;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    height: 48vh;
+}
+
+@media (max-width: 768px) {
+    .bgfooter2{
+        height: 27vh; 
+        max-width: 70%;
+        margin-left: 60px;
+    }
 }
 
 .bgfooter3{
     background-color: #2d2827;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
+    /* border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px; */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    height: 48vh;
+}
+
+@media (max-width: 768px) {
+    .bgfooter3{
+        height: 27vh; 
+        max-width: 70%;
+        margin-left: 60px;
+    }
+}
+
+.clock {
+    position: absolute;
+    top: 40px; /* Menempatkan jam di bagian atas */
+    right: 20px; /* Menempatkan jam di bagian kanan */
+    font-size: 2vw; /* Ukuran font responsif */
+    color: white;
+    letter-spacing: 1px; /* Spasi antar huruf */
+    z-index: 999; /* Mengatur kedalaman tumpukan */
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
 }
 
