@@ -1,10 +1,24 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import Card from "./Card.js"; 
+import foodList from "../desktop3/components/foodList.js";
 
-function Desktop1() {
-    return(
-        <div className="desktop1">
-            <h1>Home</h1>
-        </div>
-    )
+function Desktop2() {
+  return (
+    <div className="desktop2">
+      <h3>Foods</h3>
+      <div className="map">
+      {foodList.map(function (food) {
+        return (
+          <Card
+            name={food.name}
+            link={food.link}
+            description={food.description}
+          />
+        );
+      })}
+      </div>
+    </div>
+  );
 }
+
+export default Desktop2;

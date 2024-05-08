@@ -7,9 +7,9 @@ function Desktop4() {
     <div className="desktop4">
       <h1 className="judulsupport">Support Us</h1>
 
-      <div className="name">
+      <div className="nama">
         <input
-          className="nameisi"
+          className="namaisi"
           type="text"
           placeholder="Type Your Name....."
         ></input>

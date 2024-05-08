@@ -130,7 +130,7 @@ function Desktop1() {
               {slides2.map((slide, index) => (
                 <img
                   key={index}
-                  src={slide}
+                  src={slide}                               
                   style={{
                     display: index === currentSlide ? "block" : "none",
                   }}
