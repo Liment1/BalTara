@@ -12,7 +12,7 @@ function Desktop2() {
           <Card
             name={food.name}
             link={food.link}
-            description={food.description}
+            descrip={food.description}
           />
         );
       })}
