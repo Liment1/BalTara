@@ -6,9 +6,7 @@ const app = express();
 app.use(bodyParser.json()); // Middleware untuk parsing JSON
 
 // Rute GET untuk endpoint root
-app.get("/", (req, res) => {
-  res.send("Welcome to the Express server!");
-});
+app.get("/", (req, res) => {});
 
 // Rute POST untuk menerima data dari klien
 app.post("/api/submit", (req, res) => {
@@ -30,14 +28,13 @@ app.post("/api/submit", (req, res) => {
     return res.json({ success: false, message: "Name already exists." });
   }
 
-  // Jika valid, tambahkan ke array dan simpan
   kritik.push({ name, suggestions });
-  saveKritik(kritik); // Simpan perubahan ke file
+  saveKritik(kritik);
 
   res.json({ success: true });
 });
 
-const PORT = 3000; // Port tempat server mendengarkan
+const PORT = 3000;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });

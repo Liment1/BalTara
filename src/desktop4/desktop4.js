@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./desktop4.css";
+import Swal from "sweetalert2";
 
 function Desktop4() {
   const [name, setName] = useState("");
@@ -8,7 +9,21 @@ function Desktop4() {
 
   const handleSubmit = () => {
     if (name.trim() === "" || suggestions.trim() === "") {
-      setError("Name and suggestions cannot be empty");
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 3000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.onmouseenter = Swal.stopTimer;
+          toast.onmouseleave = Swal.resumeTimer;
+        },
+      });
+      Toast.fire({
+        icon: "error",
+        title: "Please fill in both fields.",
+      });
       return;
     }
 
@@ -22,7 +37,21 @@ function Desktop4() {
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          setError("");
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.onmouseenter = Swal.stopTimer;
+              toast.onmouseleave = Swal.resumeTimer;
+            },
+          });
+          Toast.fire({
+            icon: "success",
+            title: "Thank you for your suggestions!",
+          });
           // Handle successful submission
           setName("");
           setSuggestions("");
@@ -31,7 +60,21 @@ function Desktop4() {
         }
       })
       .catch((error) => {
-        setError("An error occurred while submitting data.");
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          },
+        });
+        Toast.fire({
+          icon: "error",
+          title: "An error occurred. Please try again later.",
+        });
       });
   };
 

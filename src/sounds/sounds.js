@@ -1,12 +1,10 @@
-// import React from 'react';
-// import backgroundMusic from './ratuanom.mp3'; // Ganti dengan path file musik Anda
+import React from "react";
+import backgroundMusic from "./ratuanom.mp3"; // Ganti dengan path file musik Anda
 
-// function Sounds(){
-//     return(
-//         <div className="suara">
-//             <audio src={backgroundMusic} autoPlay loop />
-//         </div>
-//     )
-// }
+function Sounds() {
+  const [isPlaying, setIsPlaying] = React.useState(true);
 
-// export default Sounds;
+  return <audio src={backgroundMusic} autoPlay={isPlaying} loop={true} />;
+}
+
+export default Sounds;
