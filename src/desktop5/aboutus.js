@@ -39,12 +39,16 @@ const AboutUs = () => {
                   <img src="/images/weli.jpg" alt="Welliam Prasetio Hoedoto" />
                 </div>
                 <div className="t-b-text">
-                  <strong>Welliam Prasetio Hoedoto</strong>
+                  <center>
+                    <strong>Welliam Prasetio H</strong>
+                  </center>
                   <span>Project Manager</span>
                   <div className="team-social">
-                    <a href="https://www.instagram.com/wellplayd">
+                    <a href="https://www.instagram.com/welliampras">
                       <i>
-                        <img className="ig" src={instagram} alt="ig" />
+                        <center>
+                          <img className="ig" src={instagram} alt="ig" />
+                        </center>
                       </i>
                     </a>
                   </div>
@@ -58,12 +62,16 @@ const AboutUs = () => {
                   <img src="/images/richie.jpg" alt="Richie Giansanto" />
                 </div>
                 <div className="t-b-text">
-                  <strong>Richie Giansanto</strong>
+                  <center>
+                    <strong>Richie Giansanto</strong>
+                  </center>
                   <span>00000076847</span>
                   <div className="team-social">
                     <a href="https://www.instagram.com/gric_14">
                       <i>
-                        <img className="ig" src={instagram} alt="ig" />
+                        <center>
+                          <img className="ig" src={instagram} alt="ig" />
+                        </center>
                       </i>
                     </a>
                   </div>
@@ -77,12 +85,16 @@ const AboutUs = () => {
                   <img src="/images/keisen.jpg" alt="Keisen Susanto" />
                 </div>
                 <div className="t-b-text">
-                  <strong>Keisen Susanto</strong>
+                  <center>
+                    <strong>Keisen Susanto</strong>
+                  </center>
                   <span>00000078136</span>
                   <div className="team-social">
                     <a href="https://www.instagram.com/keisen_susantoo">
                       <i>
-                        <img className="ig" src={instagram} alt="ig" />
+                        <center>
+                          <img className="ig" src={instagram} alt="ig" />
+                        </center>
                       </i>
                     </a>
                   </div>
@@ -96,12 +108,16 @@ const AboutUs = () => {
                   <img src="/images/ricat.jpg" alt="Richard Giansanto" />
                 </div>
                 <div className="t-b-text">
-                  <strong>Richard Giansanto</strong>
+                  <center>
+                    <strong>Richard Giansanto</strong>
+                  </center>
                   <span>00000076941</span>
                   <div className="team-social">
                     <a href="https://www.instagram.com/gchrd08">
                       <i>
-                        <img className="ig" src={instagram} alt="ig" />
+                        <center>
+                          <img className="ig" src={instagram} alt="ig" />
+                        </center>
                       </i>
                     </a>
                   </div>

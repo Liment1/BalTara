@@ -1,116 +1,83 @@
-import React, { useState } from "react";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import "./desktop4.css";
-import Swal from "sweetalert2";
 
-function Desktop4() {
-  const [name, setName] = useState("");
-  const [suggestions, setSuggestions] = useState("");
-  const [error, setError] = useState("");
+const Contact = () => {
+  const form = useRef();
 
-  const handleSubmit = () => {
-    if (name.trim() === "" || suggestions.trim() === "") {
-      const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        },
-      });
-      Toast.fire({
-        icon: "error",
-        title: "Please fill in both fields.",
-      });
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    // Mengambil nilai dari formulir
+    const formData = new FormData(form.current);
+    const userName = formData.get("user_name");
+    const userIg = formData.get("user_ig");
+    const message = formData.get("message");
+
+    // Validasi: pastikan semua input diisi
+    if (!userName || !userIg || !message) {
+      alert("Silakan isi semua kolom sebelum mengirim.");
       return;
     }
 
-    fetch("/api/submit", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ name, suggestions }),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          const Toast = Swal.mixin({
-            toast: true,
-            position: "top-end",
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-              toast.onmouseenter = Swal.stopTimer;
-              toast.onmouseleave = Swal.resumeTimer;
-            },
-          });
-          Toast.fire({
-            icon: "success",
-            title: "Thank you for your suggestions!",
-          });
-          // Handle successful submission
-          setName("");
-          setSuggestions("");
-        } else {
-          setError(data.message);
+    emailjs
+      .sendForm(
+        "service_ka7tmnw",
+        "template_27ovepq",
+        form.current,
+        "jzoz9uNiErzSbzXjd"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert("Pesan berhasil dikirim!");
+          // Mengosongkan formulir setelah pesan berhasil dikirim
+          form.current.reset();
+        },
+        (error) => {
+          console.log(error.text);
+          alert("Terjadi kesalahan saat mengirim pesan.");
         }
-      })
-      .catch((error) => {
-        const Toast = Swal.mixin({
-          toast: true,
-          position: "top-end",
-          showConfirmButton: false,
-          timer: 3000,
-          timerProgressBar: true,
-          didOpen: (toast) => {
-            toast.onmouseenter = Swal.stopTimer;
-            toast.onmouseleave = Swal.resumeTimer;
-          },
-        });
-        Toast.fire({
-          icon: "error",
-          title: "An error occurred. Please try again later.",
-        });
-      });
+      );
   };
 
   return (
-    <div className="desktop4">
-      <h1 className="judulsupport">Support Us</h1>
+    <div>
+      <form className="contact-form" ref={form} onSubmit={sendEmail}>
+        <p className="judulsupport">Support Us!</p>
+        <div className="namakotak">
+          <input
+            className="namakotakisi"
+            type="text"
+            name="user_name"
+            placeholder="Nama Anda"
+          />
+        </div>
+        <div className="namakotak">
+          <input
+            className="namakotakisi"
+            type="text"
+            name="user_ig"
+            placeholder="@username instagram (opsional)"
+          />
+        </div>
 
-      <div className="nama">
-        <input
-          className="namaisi"
-          type="text"
-          placeholder="Type Your Name....."
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-      </div>
+        <div className="suggestions">
+          <textarea
+            className="suggestionsisi"
+            name="message"
+            placeholder="Tuliskan pesan / kritik / saran pada kami!"
+          />
+        </div>
 
-      <div className="suggestions">
-        <textarea
-          className="suggestionsisi"
-          type="text"
-          placeholder="Enter Suggestions and Critics"
-          value={suggestions}
-          onChange={(e) => setSuggestions(e.target.value)}
-        />
-      </div>
-
-      <div className="tampungbutton">
-        <button className="buttonsub" onClick={handleSubmit}>
-          Submit
-        </button>
-      </div>
-
-      {error && <p className="error">{error}</p>}
+        <div className="tampungbutton">
+          <button className="buttonsub" type="submit">
+            Kirim
+          </button>
+        </div>
+      </form>
     </div>
   );
-}
+};
 
-export default Desktop4;
+export default Contact;

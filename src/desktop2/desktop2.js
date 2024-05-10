@@ -8,8 +8,11 @@ function Desktop2() {
 
   return (
     <div className="desktop2">
-      <h3>Foods</h3>
+      <center>
+        <h1>Foods</h1>
+      </center>
       <div className="map">
+
       {foodList && foodList.foodList.map(function (food, index) {
         return (
           <Card
