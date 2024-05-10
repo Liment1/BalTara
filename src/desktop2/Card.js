@@ -2,10 +2,10 @@ import React from 'react';
 import "./desktop2.css";
 import {Link}  from "react-router-dom";
 
-function Card({ id, name, link, description }) {
+function Card({ id, link, name, description }) {
   return (
-      <div>
-        <Link to={`/foods/${id + 1}`} className="bg">
+      <div key={id}>
+        <Link to={`/foods/${id}`} className="bg">
           <div className="card">
           <h2 className="name">{name}</h2>
           <img src={link} alt={name}></img>

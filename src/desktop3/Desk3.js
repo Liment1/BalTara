@@ -1,32 +1,42 @@
 import './Desk3.css';
 import  DescComp from './descComp';
-import foodList from './components/foodList';
-import {useState} from "react";
+import imageList from '../desktop2/images';
+import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
+import useFoodFetch from "./components/foodList";
+import {Link} from "react-router-dom";
 
 function Desk3() {
+  const [   currFood, setcurrFood] = useState({});
   let par =  useParams();
   let id = Number(par.id);
-  console.log(id);
-  const [index, setIndx] = useState(id - 1);
-  function subIndx(){
-      setIndx((index - 1 + 12) % 12);
-  }
+  const { foodF : foodList, loading, error } = useFoodFetch()
+  const [index, setIndx] = useState(id);
 
-  function addIndx(){
-    setIndx((index + 1) % 12);
-  }
+    useEffect(() => {
+        if(foodList != null){
+            setcurrFood(foodList.foodList.find(food => {
+                return food.id === index;
+            }));
+        }
+    }, [foodList, index]);
+
+    function subIndex(){
+        setIndx((index + 11) % 12);
+    }
+
+    function addIndex(){
+        setIndx((index + 13) % 12);
+    }
 
 
-  const currFood = foodList.find(food => {
-    return food.id === index;
-  });
-
-  return (
-      <div>
-        <DescComp name={currFood.name} link={currFood.link} desc={currFood.description}/>
-        <button className="btn btn-support" onClick={subIndx}>Prev</button>
-        <button className="btn btn-support" onClick={addIndx}>Next</button>
+    return (
+      <div className="foodDetails">
+          {foodList && <DescComp name={currFood.name} link={imageList[index]} desc={currFood.description}/>}
+          <div className="d-flex flex-column align-items-center">
+              <Link to={`/foods/${(id + 11) % 12}`} className="btn-support" onClick={subIndex}>Prev</Link>
+              <Link to={`/foods/${(id + 13) % 12}`} className=" btn-support" onClick={addIndex}>Next</Link>
+          </div>
       </div>
   );
 }

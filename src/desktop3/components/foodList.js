@@ -1,78 +1,29 @@
-import imageList from "./images";
+import { useEffect, useState } from "react";
 
-const foodList = [
-    {
-        id : 0,
-        name:"Famous",
-        link: imageList[0],
-        description:"Nasi Campur babi",
-    },
-    {
-        id : 1,
-        name:"Famous",
-        link: imageList[1],
-        description:"Babi Guling",
-    },
-    {
-        id : 2,
-        name:"Famous",
-        link: imageList[2],
-        description:"Ayam Betutu",
-    },
-    {
-        id : 3,
-        name:"Famous",
-        link: imageList[3],
-        description:"Sate Lilit",
-    },
-    {
-        id : 4,
-        name:"Famous",
-        link: imageList[4],
-        description:"Lawar",
-    },
-    {
-        id : 5,
-        name:"Famous",
-        link: imageList[5],
-        description:"Sambal Matah",
-    },
-    {
-        id : 6,
-        name:"Suggestions",
-        link: imageList[6],
-        description:"Bebek Goreng",
-    },
-    {
-        id : 7,
-        name:"Famous",
-        link: imageList[7],
-        description:"Sate Babi",
-    },
-    {
-        id : 8,
-        name:"Suggestions",
-        link: imageList[8],
-        description:"Nasi Tepeng",
-    },
-    {
-        id : 9,
-        name:"Suggestions",
-        link: imageList[9],
-        description:"Tipat Blayag",
-    },
-    {
-        id : 10,
-        name:"Famous",
-        link: imageList[10],
-        description:"Sate Plecing",
-    },
-    {
-        id : 11,
-        name:"Suggestions",
-        link: imageList[11],
-        description:"Sambal Embe",
-    },
-];
+function useFoodFetch() {
+    const [foodF, setfoodF] = useState(null); // Initialize state as null
+    const [loading, setLoading] = useState(true); // State to manage loading
+    const [error, setError] = useState(null); // State to manage error
 
-export default foodList;
+    useEffect(() => {
+        fetch(' https://liment1.github.io/foodData/source.json')
+            .then(res => {
+                if (!res.ok) {
+                    throw Error('Network response was not ok');
+                }
+                return res.json();
+            })
+            .then(data => {
+                setfoodF(data);
+                setLoading(false);
+            })
+            .catch(error => {
+                setError(error);
+                setLoading(false);
+            });
+
+    }, []); // Empty dependency array to run once on mount
+    return { foodF, loading, error };
+}
+
+export default useFoodFetch;
