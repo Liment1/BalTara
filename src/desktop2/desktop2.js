@@ -10,6 +10,7 @@ function Desktop2() {
       {foodList.map(function (food) {
         return (
           <Card
+            id={food.id}
             name={food.name}
             link={food.link}
             descrip={food.description}

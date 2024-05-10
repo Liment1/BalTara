@@ -2,9 +2,13 @@ import './Desk3.css';
 import  DescComp from './descComp';
 import foodList from './components/foodList';
 import {useState} from "react";
+import {useParams} from "react-router-dom";
 
-function Desk3(a) {
-  const [index, setIndx] = useState(a.indx);
+function Desk3() {
+  let par =  useParams();
+  let id = Number(par.id);
+  console.log(id);
+  const [index, setIndx] = useState(id - 1);
   function subIndx(){
       setIndx((index - 1 + 12) % 12);
   }

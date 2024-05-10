@@ -47,7 +47,7 @@ function Desktop1() {
     var s = date.getSeconds();
     var session = "AM";
 
-    if (h == 0) {
+    if (h === 0) {
       h = 12;
     }
 
@@ -61,8 +61,11 @@ function Desktop1() {
     s = s < 10 ? "0" + s : s;
 
     var time = h + ":" + m + ":" + s + " " + session;
-    document.getElementById("MyClockDisplay").innerText = time;
-    document.getElementById("MyClockDisplay").textContent = time;
+    if (document.getElementById("MyClockDisplay"))
+      document.getElementById("MyClockDisplay").innerText = time;
+
+    if(document.getElementById("MyClockDisplay"))
+      document.getElementById("MyClockDisplay").textContent = time;
 
     setTimeout(showTime, 1000);
   }
@@ -130,7 +133,7 @@ function Desktop1() {
               {slides2.map((slide, index) => (
                 <img
                   key={index}
-                  src={slide}                               
+                  src={slide}
                   style={{
                     display: index === currentSlide ? "block" : "none",
                   }}

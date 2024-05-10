@@ -7,6 +7,7 @@ import foods from "./restaurant.png";
 import abtus from "./abtus.png";
 import support from "./support.png";
 import iconbali from "./iconbali.png";
+import {Outlet, Link} from "react-router-dom";
 
 function App() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -46,24 +47,24 @@ function App() {
           <hr />
           <div className="d-grid">
             <div className="mainmenu">
-              <a href="/home" className="btn btn-home">
-                <img src={home} alt="Home" />
-                <span className="home1">Home</span>
-              </a>
-              <a href="/foods" className="btn btn-foods">
-                <img src={foods} alt="Foods" />
+              <Link to="/" className="btn btn-home">
+                  <img src={home} alt="Home"/>
+                  <span className="home1">Home</span>
+              </Link>
+              <Link to="/foods/1" className="btn btn-foods">
+                <img src={foods} alt="Foods"/>
                 <span className="foods1">Foods</span>
-              </a>
-              <a href="/abtus" className="btn btn-abtus">
+              </Link>
+              <Link to="/abtus" className="btn btn-abtus">
                 <img src={abtus} alt="About Us" />
                 <span class="abtus1">About Us</span>
-              </a>
+              </Link>
             </div>
             <div className="support">
-              <a href="/support" className="btn btn-support">
+              <Link to="/support" className="btn btn-support">
                 <img src={support} alt="Support" />
                 <span class="support1">Support Us</span>
-              </a>
+              </Link>
             </div>
           </div>
           <br />
@@ -81,6 +82,7 @@ function App() {
           </div>
         </Offcanvas.Body>
       </Offcanvas>
+    <Outlet/>
     </div>
   );
 }
