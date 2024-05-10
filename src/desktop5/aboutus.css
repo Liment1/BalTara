@@ -89,11 +89,13 @@ a {
   justify-content: center;
   align-items: center;
   margin-top: 4px;
+  width: 4vw;
+  text-align: center;
 }
 
 .ig {
-  width: 2vw;
-  height: 4vh;
+  width: 4vw;
+  height: auto;
 }
 
 .team-social a {
