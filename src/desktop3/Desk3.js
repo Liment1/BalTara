@@ -14,10 +14,11 @@ function Desk3() {
   const [index, setIndx] = useState(id);
 
     useEffect(() => {
-        if(foodList != null){
-            setcurrFood(foodList.foodList.find(food => {
-                return food.id === index;
+        if(foodList.length > 0){
+            setcurrFood(foodList.find(food => {
+                return Number(food.id) === index;
             }));
+
         }
     }, [foodList, index]);
 
