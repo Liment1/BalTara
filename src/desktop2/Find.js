@@ -7,7 +7,7 @@ export default function Search({ foodList, setFoodList }) {
         } else {
             setFoodList(
                 foodList.filter(food =>
-                    food.name.toLowerCase().includes(event.target.value.toLowerCase())
+                    food.jenis.toLowerCase().includes(event.target.value.toLowerCase())
                 )
             );
         }
@@ -20,7 +20,9 @@ export default function Search({ foodList, setFoodList }) {
                 <option value="all">All</option>
                 <option value="ayam">Ayam</option>
                 <option value="babi">Babi</option>
+                <option value="daging">Daging</option>
                 <option value="sambal">Sambal</option>
+                <option value="Nasi">Nasi</option>
             </select>
         </div>
     );
