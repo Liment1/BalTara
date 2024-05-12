@@ -1,4 +1,5 @@
 import React from "react";
+import "./find.css";
 
 export default function Search({ foodList, setFoodList }) {
     const search = (event) => {
@@ -13,10 +14,9 @@ export default function Search({ foodList, setFoodList }) {
         }
     };
 
-
     return (
         <div className="searchBar w-25">
-            <select className="form-select" aria-label="Default select" onChange={search}>
+            <select className="form-select select-control" aria-label="Default select" onChange={search}>
                 <option value="all">All</option>
                 <option value="ayam">Ayam</option>
                 <option value="babi">Babi</option>

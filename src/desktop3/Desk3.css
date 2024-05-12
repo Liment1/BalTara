@@ -1,5 +1,71 @@
+/* Desk3.css */
 @import url("https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
+/* Style untuk gambar */
 .gambar {
-    max-width: 500px;
+    max-width: 100%;
+    margin: 30px auto; /* Tengahkan gambar */
+    max-height: 400px;
+    border-radius: 20px;
+    filter: drop-shadow(0 0 10px rgb(0, 60, 67, 1));   
+    margin-left: 70px; 
+}
+
+/* Style untuk deskripsi */
+.tulisan {
+    background-color: #1b2f31;
+    text-align: left;
+    width: 90%;
+    margin: 30px auto; /* Tengahkan deskripsi */
+    height: auto;
+    border-radius: 20px;
+    padding: 25px;
+    filter: drop-shadow(0 0 10px rgb(0, 60, 67, 1));  
+    margin-left: 90px;
+}
+
+/* Style untuk nama makanan */
+.namamakan {
+    margin-left: 20px;
+    color: #42686b;
+}
+
+/* Style untuk tombol */
+.bn62 {
+    color: #1cc49d;
+    background-color: #1b2f31;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    width: 8em;
+    font-size: large;
+    font-weight: 600;
+}
+
+/* Style untuk tombol */
+.tombol {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Style untuk elemen kiri */
+.left {
+    margin-right: 60px;
+}
+
+/* Media queries untuk layar berukuran kecil */
+@media screen and (max-width: 768px) {
+    .gambar {
+        max-width: 90%;
+        margin-left: 10px; /* Geser ke kanan agar gambar tidak menempel ke kiri */
+        margin-right: auto; /* Geser ke kanan agar gambar tidak menempel ke kiri */
+    }
+
+    .tulisan {
+        width: 90%;
+        margin-left: auto; /* Geser ke kanan agar deskripsi tidak menempel ke kiri */
+        margin-right: auto; /* Geser ke kanan agar deskripsi tidak menempel ke kiri */
+    }
 }
