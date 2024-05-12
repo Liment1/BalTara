@@ -1,72 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 .gambar{
     max-width: 500px;
-<<<<<<< Updated upstream
-=======
 }
 
-body {
-    margin: 0;
-}
-
-.sb-title {
-    position: relative;
-    top: -12px;
-    font-family: Roboto, sans-serif;
-    font-weight: 500;
-}
-
-.sb-title-icon {
-    position: relative;
-    top: -5px;
-}
-
-.card-container {
-    display: flex;
-    height: 500px;
-    width: 600px;
-}
-
-.panel {
-    background: white;
-    width: 300px;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
-
-.half-input-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-.half-input {
-    max-width: 120px;
-}
-
-.map {
-    width: 300px;
-}
-
-h2 {
-    margin: 0;
-    font-family: Roboto, sans-serif;
-}
-
-input {
-    height: 30px;
-}
-
-input {
-    border: 0;
-    border-bottom: 1px solid black;
-    font-size: 14px;
-    font-family: Roboto, sans-serif;
-    font-style: normal;
-    font-weight: normal;
-}
-
-input:focus::placeholder {
-    color: white;
->>>>>>> Stashed changes
+.Description h1{
+    text-align: left;
 }

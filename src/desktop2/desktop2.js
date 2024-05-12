@@ -19,7 +19,7 @@ function Desktop2() {
             id={food.id}
             name={food.name}
             link={imageList[index]}
-            descrip={food.description}
+            description={food.description}
           />
         );
       })}

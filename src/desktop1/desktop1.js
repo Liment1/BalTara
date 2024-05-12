@@ -13,6 +13,7 @@ import tipatblayag from "./tipatblayag.jpg";
 import tepeng2 from "./tepeng2.jpg";
 import sateplecing from "./sateplecing.jpg";
 import sambalembe from "./sambalembe.jpg";
+import Youtube from "../youtube/yt.js";
 
 function Desktop1() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -100,10 +101,8 @@ function Desktop1() {
               menjelajahi keindahan budaya Bali.
             </p>
           </div>
-          <div className="col-md-6 video-container">
-            <video autoPlay loop muted className="responsive-video">
-              <source src={video} type="video/mp4" />
-            </video>
+          <div className="video-container">
+            <Youtube />
           </div>
         </div>
       </div>

@@ -6,7 +6,6 @@ import Desktop4 from "./desktop4/desktop4.js";
 import AboutUs from "./desktop5/aboutus.js";
 import Navbar from "./navbar/navbar.js";
 import Progress from "./progress/progress.js";
-<<<<<<< Updated upstream
 import Sounds from "./sounds/sounds";
 import {BrowserRouter, Route, Routes } from "react-router-dom";
 
@@ -30,27 +29,6 @@ function App() {
       </BrowserRouter>
 
     </div>
-=======
-import Desk3 from "./desktop3/Desk3"
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-
-
-function App() {
-  return (
-      <div className="container mw-100">
-          <BrowserRouter>
-              <Progress/>
-              <Navbar/>
-              <Routes>
-                  <Route path="/" element={<Navbar />}>
-                      <Route index element={<Desktop1 />} />
-                      <Route path="support" element={<Desktop4 />} />
-                      {/*<Route path="foods" element={<Desk3 indx={2}/>} />*/}
-                  </Route>
-              </Routes>
-          </BrowserRouter>
-      </div>
->>>>>>> Stashed changes
   );
 }
 

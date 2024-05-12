@@ -85,9 +85,8 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
-  width: 80%;
-  padding-top: 56.25%;
-  margin-left: 10%;
+  margin-top: 6vh;
+  margin-bottom: 6vh;
 }
 
 .responsive-video {
