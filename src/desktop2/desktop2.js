@@ -1,53 +1,45 @@
-import React from 'react';
 import Card from "./Card.js";
 import useFoodFetch from "../desktop3/components/foodList.js";
 import imageList from "./images";
+import Search from "./Search.js";
+import Find from "./Find.js";
+import {useState, useEffect} from "react";
 
 function Desktop2() {
-    const { foodList, loading, error } = useFoodFetch();
+    const { foodF : startFoodList, loading, error } = useFoodFetch()
+    const [foodList, setFoodList] = useState(startFoodList);
+
+    useEffect(() => {
+        setFoodList(startFoodList);
+    }, [startFoodList]);
+
+    useEffect(() => {
+        if(startFoodList){
+            startFoodList.map(function (food, index){
+                return(
+                    food.link = imageList[index]
+                );
+            })
+        }}, [startFoodList]);
+
     return (
         <div className="desktop2">
             <center>
                 <h1>Foods</h1>
             </center>
-            <div className="map">
-                {foodList && foodList.map(function (food, index) {
-                    return (
-                        <Card
-                            key={food.id} // Assuming food has an id property
-                            name={food.name}
-                            link={imageList[index]}
-                            description={food.description}
-                        />
-                    );
-                })}
-            </div>
-            <div className="input-container">
-                <center>
-                    <h1>Foods</h1>
-                </center>
-                <div className="input-group mb-3">
-                    <input type="text" className="form-control" placeholder="Username" aria-label="Username"
-                           aria-describedby="basic-addon1"/>
-                </div>
-                <div className="searchBar">
-                    <select className="form-select" aria-label="Default select example">
-                        <option selected>Open this select menu</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
-                    </select>
-                </div>
+            <div className="find d-flex justify-content-around">
+                <Search foodList={startFoodList} setFoodList={setFoodList} />
+                <Find foodList={startFoodList} setFoodList={setFoodList} />
             </div>
             <div className="map">
                 {foodList && foodList.map(function (food, index) {
                     return (
-                        <div className="foodCards" key={index}>
+                        <div className="foodCards">
                             <Card
-                                id={food.id} // Assuming food has an id property
+                                id={food.id}
                                 name={food.name}
-                                link={imageList[index]}
-                                tag={food.tag} // Assuming food has a tag property
+                                link={ food.link}
+                                tag={food.tag}
                             />
                         </div>
                     );
