@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import "./desktop1.css";
-import video from "./balivid.mp4";
 import nascam from "./nascam.jpg";
 import babigul from "./babigul.jpg";
 import ayambetu from "./ayambetu.jpg";
@@ -65,7 +64,7 @@ function Desktop1() {
     if (document.getElementById("MyClockDisplay"))
       document.getElementById("MyClockDisplay").innerText = time;
 
-    if(document.getElementById("MyClockDisplay"))
+    if (document.getElementById("MyClockDisplay"))
       document.getElementById("MyClockDisplay").textContent = time;
 
     setTimeout(showTime, 1000);

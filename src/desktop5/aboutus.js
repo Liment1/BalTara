@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./aboutus.css"; // Pastikan CSS untuk komponen diimpor
 import Swiper from "swiper";
 import instagram from "./ig.png";
+import Footer from "../footer/footer";
 
 const AboutUs = () => {
   useEffect(() => {
@@ -142,6 +143,7 @@ const AboutUs = () => {
           dengan desain semenarik mungkin.
         </p>
       </div>
+      <Footer />
     </div>
   );
 };

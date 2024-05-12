@@ -7,25 +7,47 @@ import AboutUs from "./desktop5/aboutus.js";
 import Navbar from "./navbar/navbar.js";
 import Progress from "./progress/progress.js";
 import Sounds from "./sounds/sounds";
-import {BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./footer/footer";
 
 function App() {
   return (
     <div className="container mw-100">
+      <Sounds />
       <BrowserRouter>
-        <Sounds />
         <Progress />
-          <Routes>
-            <Route path="/" element={<Navbar />}>
-              <Route index element={<div>
-                  <Desktop1/>
-                  <Desktop2/>
-                </div>}/>
-              <Route path="foods/:id" element={<Desktop3/>}/>
-              <Route path="abtus" element={<AboutUs/>}/>
-              <Route path="support" element={<Desktop4/>}/>
-            </Route>
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Navbar />}>
+            <Route
+              index
+              element={
+                <div>
+                  <Desktop1 />
+                  <Desktop2 />
+                  <Footer />
+                </div>
+              }
+            />
+            <Route
+              path="foods/:id"
+              element={
+                <div>
+                  <Desktop3 />
+                </div>
+              }
+            />
+            <Route path="abtus" element={<AboutUs />} />
+            <Route
+              path="support"
+              element={
+                <div>
+                  <Desktop4 />
+                  <Footer />
+                </div>
+              }
+            />
+          </Route>
+        </Routes>
       </BrowserRouter>
     </div>
   );

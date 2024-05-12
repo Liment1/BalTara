@@ -22,6 +22,7 @@ body {
   background-size: cover;
   background-position: center;
   align-items: center;
+  height: 850px;
 }
 
 .suggestions {
@@ -89,3 +90,9 @@ body {
 .buttonsub:active {
   transform: scale(0.95);
 }
+
+/* @media (max-width: 768px) {
+  .contact-form {
+    height: 700px;
+  }
+} */

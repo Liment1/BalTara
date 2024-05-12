@@ -1,0 +1,83 @@
+.footer {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(90, 89, 89, 0)
+    ),
+    url("kel4full.jpg");
+  filter: grayscale(100%);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-position: center top;
+  height: 70vh;
+  background-blend-mode: darken;
+}
+
+.bali {
+  width: 200px;
+  height: auto;
+  filter: grayscale(100%);
+}
+
+.judulfoo {
+  font-size: 70px;
+  font-weight: 100;
+}
+
+.judulfoo2 {
+  font-size: 1.5vw;
+  font-weight: 100;
+}
+
+.copyright {
+  font-size: 20px;
+  font-weight: 100;
+  margin: 2vw;
+}
+
+.tampung {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: row;
+  gap: 250px;
+}
+
+.tampungjudul {
+  margin-left: 150px;
+}
+
+@media (max-width: 937px) {
+  .tampung {
+    padding-top: 70px;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 0;
+  }
+  .footer {
+    margin: 0 !important;
+    height: 70vh;
+    padding-top: 80px;
+  }
+  .bali {
+    width: 150px;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .judulfoo {
+    font-size: 50px;
+    margin-bottom: 0;
+  }
+  .judulfoo2 {
+    font-size: 15px;
+    margin-top: 16px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  .copyright {
+    font-size: 15px;
+  }
+  .tampungjudul {
+    margin-left: 0;
+  }
+}
