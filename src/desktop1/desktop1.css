@@ -42,6 +42,8 @@ body {
 .desktop1 {
   background-image: url("bali3.png");
   background-size: cover;
+  transition: opacity 0.5s ease-in-out;
+  /*background-size: cover;*/
   background-position: center;
   width: 100vw;
   height: auto;

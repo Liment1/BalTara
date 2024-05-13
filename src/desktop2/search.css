@@ -8,14 +8,15 @@
     background-position: 10px center; 
     padding-left: 40px; 
     background-size: 20px 20px;
-    caret-color: white; /* Membuat warna kursor sama dengan warna teks */
-    transition: background-color 0.3s, border-color 0.3s; /* Efek transisi */
+    caret-color: white;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 .input-control:focus {
-    background-color: #524C42; /* Memastikan warna latar belakang tidak berubah saat input diberikan fokus */
-    border-color: #E8DFCA; /* Memastikan warna border tidak berubah saat input diberikan fokus */
-    outline: transparent; /* Menghapus outline bawaan saat input diberikan fokus */
+    background-color: #524C42;
+    border-color: #E8DFCA;
+    color: white;
+    outline: transparent;
 }
 
 .input-control::placeholder {
@@ -24,5 +25,5 @@
 }
 
 .input-control:focus::placeholder {
-    color: white; /* Memastikan warna placeholder tidak berubah saat input diberikan fokus */
+    color: white;
 }

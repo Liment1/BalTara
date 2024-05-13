@@ -72,8 +72,24 @@ function Desktop1() {
     setTimeout(showTime, 1000);
   }
 
+  useEffect(() => {
+    let nystories = document.querySelector(".desktop2").offsetTop;
+    let background = document.querySelector(".desktop1");
+
+    window.onscroll = function() {
+      if (window.pageYOffset > 0) {
+        let opac = 1 - (((window.pageYOffset) / nystories *2));
+        if (opac < 0) opac = 0;
+          background.style.opacity = opac;
+      } else {
+          background.style.opacity = 1;
+      }
+    }
+  }, [currentSlide  ]);
+
+
   return (
-    <div className="desktop1  ">
+    <div className="desktop1">
       <div className="clock">
         <div id="MyClockDisplay" className="clockdalam"></div>
         <SoundApp />
@@ -109,7 +125,7 @@ function Desktop1() {
           </div>
         </div>
       </div>
-      <div className="row">
+      <div className="row highlight-row">
         <div className="highlight">
           <p>Highlight</p>
         </div>

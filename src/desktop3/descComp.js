@@ -12,6 +12,9 @@ function DescComp(props) {
                 </div>
                 <div className="col-md-6">
                     <p className="tulisan">{props.desc}</p>
+                    <div className="maps">
+
+                    </div>
                 </div>
             </div>
             </div>
