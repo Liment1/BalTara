@@ -22,30 +22,33 @@ function Desktop2() {
   }, [startFoodList]);
 
   return (
-    <div className="desktop2">
-      <center>
-        <h1>Foods</h1>
-      </center>
-      <div className="find d-flex justify-content-around">
-        <Search foodList={startFoodList} setFoodList={setFoodList} />
-        <Find foodList={startFoodList} setFoodList={setFoodList} />
+      <div className="desktop2">
+          <center>
+              <h1>Foods</h1>
+          </center>
+          <div className="find d-flex justify-content-around">
+              <Search foodList={startFoodList} setFoodList={setFoodList}/>
+              <Find foodList={startFoodList} setFoodList={setFoodList}/>
+          </div>
+          <div className="find d-flex justify-content-end">
+              <Sort foodList={startFoodList} setFoodList={setFoodList}/>
+          </div>
+          <div className="map">
+              {foodList &&
+                  foodList.map(function (food, index) {
+                      return (
+                          <div className="foodCards">
+                              <Card
+                                  id={food.id}
+                                  name={food.name}
+                                  link={food.link}
+                                  tag={food.tag}
+                              />
+                          </div>
+                      );
+                  })}
+          </div>
       </div>
-      <div className="map">
-        {foodList &&
-          foodList.map(function (food, index) {
-            return (
-              <div className="foodCards">
-                <Card
-                  id={food.id}
-                  name={food.name}
-                  link={food.link}
-                  tag={food.tag}
-                />
-              </div>
-            );
-          })}
-      </div>
-    </div>
   );
 }
 
