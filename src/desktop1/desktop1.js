@@ -78,7 +78,7 @@ function Desktop1() {
 
     window.onscroll = function() {
       if (window.pageYOffset > 0) {
-        let opac = 1 - (((window.pageYOffset) / nystories *2));
+        let opac = 1 - (((window.pageYOffset) * (window.pageYOffset) / nystories));
         if (opac < 0) opac = 0;
           background.style.opacity = opac;
       } else {

@@ -24,9 +24,6 @@
     background-color: #3A4D39;
 }
 
-
-
-/* Style untuk deskripsi */
 .tulisan {
     background-color: #445D48;
     text-align: left;
@@ -151,4 +148,9 @@ button{
     background: transparent;
     color: transparent;
     border-color: transparent;
+}
+
+.maps {
+    position: relative;
+    z-index: 10;
 }
