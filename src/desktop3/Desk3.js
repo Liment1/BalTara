@@ -4,8 +4,6 @@ import imageList from '../desktop2/images';
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useFoodFetch from "../components/foodList";
-import Belakang from "./batu.jpg";
-import Maps from "./googleMaps.js";
 
 function Desk3() {
   const [currFood, setcurrFood] = useState({});

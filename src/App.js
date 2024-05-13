@@ -30,7 +30,7 @@ function App() {
             <Route
               path="foods/:id"
               element={
-                <div>
+                <div className="Desk3">
                   <Desktop3 />
                 </div>
               }
