@@ -1,10 +1,17 @@
-import React from "react";
-import backgroundMusic from "./ratuanom.mp3"; 
+import React, { useEffect } from "react";
+import backgroundMusic from "./ratuanom.mp3";
 
-function Sounds() {
-  const [isPlaying, setIsPlaying] = React.useState(true);
+function Sounds({ isPlaying }) {
+  useEffect(() => {
+    const audioElement = document.getElementById("backgroundAudio");
+    if (isPlaying) {
+      audioElement.play();
+    } else {
+      audioElement.pause();
+    }
+  }, [isPlaying]);
 
-  return <audio src={backgroundMusic} autoPlay={isPlaying} loop={true} />;
+  return <audio id="backgroundAudio" src={backgroundMusic} loop />;
 }
 
 export default Sounds;

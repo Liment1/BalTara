@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./sort.css"
 
 export default function Search({ foodList, setFoodList }) {
     const [originalList, setOriginalList] = useState([]);
@@ -19,8 +20,8 @@ export default function Search({ foodList, setFoodList }) {
     };
 
     return (
-        <div className="searchBar w-25">
-            <select className="form-select" aria-label="Default select" onChange={search}>
+        <div className="search w-25">
+            <select className="form-select select-control" aria-label="Default select" onChange={search}>
                 <option value="default">Default</option>
                 <option value="alpha">A-Z</option>
             </select>
