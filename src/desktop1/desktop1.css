@@ -89,14 +89,14 @@ body {
   margin-bottom: 6vh;
   width: 90%; /* Lebar video-container menjadi 100% dari lebar layar */
   max-width: 900px; /* Tentukan lebar maksimum untuk video-container */
-  margin: auto;
+  margin: auto; 
 }
 
 .responsive-video {
   max-width: 100%; /* Lebar maksimum video adalah 100% dari lebar video-container */
   max-height: 100%; /* Tinggi maksimum video adalah 100% dari tinggi video-container */
   width: auto; /* Menyesuaikan lebar video secara otomatis */
-  height: auto;
+  height: auto; 
 }
 
 .desc {
@@ -231,6 +231,7 @@ body {
   max-height: 200px;
   margin-bottom: 30px;
   animation: fade 3s ease-in-out;
+  
 }
 
 .highlight p {
@@ -240,7 +241,7 @@ body {
   color: white;
   font-weight: bold;
   text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
-  margin-bottom: 2vh;
+  margin-bottom: 2vh; 
 }
 
 @keyframes fade {
@@ -253,7 +254,7 @@ body {
 }
 
 .bgfooter1 {
-  background-color: #1f1d1d;
+  background-color: #1F1D1D;
   /* border-top-left-radius: 20px;
     border-bottom-left-radius: 20px; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
@@ -269,7 +270,7 @@ body {
 }
 
 .bgfooter2 {
-  background-color: #1f1d1d;
+  background-color: #1F1D1D;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
   height: 50vh;
 }
@@ -283,7 +284,7 @@ body {
 }
 
 .bgfooter3 {
-  background-color: #1f1d1d;
+  background-color: #1F1D1D;
   /* border-top-right-radius: 20px;
     border-bottom-right-radius: 20px; */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
@@ -302,7 +303,7 @@ body {
   position: absolute;
   top: 20px;
   right: 20px;
-  font-size: 30px;
+  font-size: 2vw; 
   color: white;
   letter-spacing: 1px;
   z-index: 999;
@@ -314,9 +315,10 @@ body {
 
 @media (max-width: 768px) {
   .clock {
-    font-size: 20px;
+    font-size: 4vw; 
   }
 }
+
 
 .play {
   position: absolute; /* Tambahkan properti ini */
@@ -343,37 +345,12 @@ body {
   }
 }
 
-.sound {
-  padding-left: 120px;
-}
+
+
 
 .tekspanjang {
   min-width: 30vw;
 }
 
-#play,
-#pause {
-  width: 60px;
-}
-#play:hover,
-#pause:hover {
-  cursor: pointer;
-}
-#pause {
-  display: none;
-}
 
-@media (max-width: 408px) {
-  #play,
-  #pause {
-    width: 45px;
-    padding-top: 0;
-  }
-  .sound {
-    padding-left: 160px;
-    width: 80pz;
-  }
-  .clockdalam {
-    padding-left: 100px;
-  }
-}
+

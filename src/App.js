@@ -12,9 +12,11 @@ import Footer from "./footer/footer";
 function App() {
   return (
     <div className="container mw-100">
+      <Sounds />
+
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navbar />}>
+              <Route path="/" element={<Navbar />}>
             <Route
               index
               element={
