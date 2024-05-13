@@ -13,6 +13,7 @@ function App() {
   return (
     <div className="container mw-100">
       <Sounds />
+
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Navbar />}>
@@ -40,7 +41,6 @@ function App() {
               element={
                 <div>
                   <Desktop4 />
-                  <Footer />
                 </div>
               }
             />
