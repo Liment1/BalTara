@@ -20,7 +20,7 @@ export default function Search({ foodList, setFoodList }) {
     };
 
     return (
-        <div className="search w-25">
+        <div className="search w-15">
             <select className="form-select select-control" aria-label="Default select" onChange={search}>
                 <option value="default">Default</option>
                 <option value="alpha">A-Z</option>

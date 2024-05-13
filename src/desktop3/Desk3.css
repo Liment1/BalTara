@@ -23,13 +23,7 @@
     background-color: #3A4D39;
 }
 
-.foodDetails{
-    background-color: #3A4D39;
-}
 
-.tombol{
-    background-color: #3A4D39;
-}
 
 /* Style untuk deskripsi */
 .tulisan {
@@ -54,6 +48,14 @@
     font-weight: bold;
 }
 
+
+.foodDetails{
+  background-color: #3A4D39;
+}
+
+.tombol{
+  background-color: #3A4D39;
+}
 
 /* Style untuk tombol */
 .tombol {

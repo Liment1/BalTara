@@ -87,14 +87,16 @@ body {
   position: relative;
   margin-top: 6vh;
   margin-bottom: 6vh;
+  width: 90%; /* Lebar video-container menjadi 100% dari lebar layar */
+  max-width: 900px; /* Tentukan lebar maksimum untuk video-container */
+  margin: auto; 
 }
 
 .responsive-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  max-width: 100%; /* Lebar maksimum video adalah 100% dari lebar video-container */
+  max-height: 100%; /* Tinggi maksimum video adalah 100% dari tinggi video-container */
+  width: auto; /* Menyesuaikan lebar video secara otomatis */
+  height: auto; 
 }
 
 .desc {
@@ -350,13 +352,5 @@ body {
   min-width: 30vw;
 }
 
-.video-container {
-  width: 90%; /* Lebar video-container menjadi 90% dari lebar layar */
-  margin: auto; /* Posisi video-container di tengah */
-}
 
-.responsive-video {
-  width: 30%; /* Lebar video menjadi 100% dari lebar video-container */
-  height: auto; /* Tinggi video menyesuaikan proporsi aspek */
-}
 
