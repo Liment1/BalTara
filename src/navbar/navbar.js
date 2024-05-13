@@ -46,7 +46,6 @@ function App() {
           <hr />
           <div className="d-grid">
             <div className="mainmenu">
-
               <Link to="/" className="btn btn-home">
                 <img src={home} alt="Home" />
                 <span className="home1">Home</span>

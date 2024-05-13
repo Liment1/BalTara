@@ -5,18 +5,16 @@ import Desktop3 from "./desktop3/Desk3.js";
 import Desktop4 from "./desktop4/desktop4.js";
 import AboutUs from "./desktop5/aboutus.js";
 import Navbar from "./navbar/navbar.js";
-import Sounds from "./sounds/sounds";
+
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./footer/footer";
 
 function App() {
   return (
     <div className="container mw-100">
-      <Sounds />
-
       <BrowserRouter>
         <Routes>
-              <Route path="/" element={<Navbar />}>
+          <Route path="/" element={<Navbar />}>
             <Route
               index
               element={
