@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./find.css";
 
 export default function Search({ foodList, setFoodList }) {

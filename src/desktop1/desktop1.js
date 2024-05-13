@@ -82,7 +82,7 @@ function Desktop1() {
   }
 
   return (
-    <div className="desktop1">
+    <div className="desktop1  ">
       <div className="clock">
         <div id="MyClockDisplay" className="clock"></div>
         <button className="play" onClick={togglePlay}>
@@ -101,7 +101,7 @@ function Desktop1() {
       </div>
       <div className="video">
         <div className="row mt-1">
-          <div className="col-md desc">
+          <div className="mx-auto desc">
             <h2>Apa itu BalTara ?</h2>
             <br />
             <p className="tekspanjang">

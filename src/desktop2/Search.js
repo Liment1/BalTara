@@ -12,6 +12,7 @@ export default function Search({ foodList, setFoodList }) {
         );
     };
 
+
     const handleClick = () => {
         setPlaceholderText("Typing"); 
     };
