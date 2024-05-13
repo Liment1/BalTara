@@ -3,7 +3,8 @@ import useFoodFetch from "../desktop3/components/foodList.js";
 import imageList from "./images";
 import Search from "./Search.js";
 import Find from "./Find.js";
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
+import Sort from "./Sort.js";
 
 function Desktop2() {
   const { foodF: startFoodList, loading, error } = useFoodFetch();

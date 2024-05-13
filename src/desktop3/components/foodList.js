@@ -6,7 +6,6 @@ function useFoodFetch() {
     const [error, setError] = useState(null); // State to manage error
 
     useEffect(() => {
-        // fetch('https://liment1.github.io/foodData/source.json')
         fetch('https://liment1.github.io/foodData/source.json')
             .then(res => {
                 if (!res.ok) {
