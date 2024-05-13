@@ -13,11 +13,11 @@ import tepeng2 from "./tepeng2.jpg";
 import sateplecing from "./sateplecing.jpg";
 import sambalembe from "./sambalembe.jpg";
 import Youtube from "../youtube/yt.js";
-import Sounds from "../sounds/sounds.js";
+import Sound from "../sounds/sounds.js";
 
 function Desktop1() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false); // Change to false initially
+  const [isPlaying, setIsPlaying] = useState(true);
   const slides = [nascam, babigul, ayambetu, satelilit];
   const slides2 = [lawar2, matah1, bebekgor, satebab];
   const slides3 = [tipatblayag, tepeng2, sateplecing, sambalembe];
@@ -72,25 +72,35 @@ function Desktop1() {
     setTimeout(showTime, 1000);
   }
 
-  function togglePlay() {
-    setIsPlaying((prevState) => !prevState);
-  }
+  // function togglePlay() {
+  //   setIsPlaying((prevState) => !prevState);
+  // }
 
-  function handlePlay() {
-    // Change isPlaying state when play button is clicked
-    setIsPlaying(true);
+  // function handlePlay() {
+  //   // Change isPlaying state when play button is clicked
+  //   setIsPlaying(true);
+  // }
+
+  function toggleAudio() {
+    const audioElement = document.getElementById("player");
+    if (audioElement.paused) {
+      audioElement.play();
+      setIsPlaying(false);
+    } else {
+      audioElement.pause();
+      setIsPlaying(true);
+    }
   }
 
   return (
     <div className="desktop1">
       <div className="clock">
-        <div id="MyClockDisplay" className="clock"></div>
-        <button className="play" onClick={togglePlay}>
-          {isPlaying ? "Pause" : "Play"}
-        </button>
-        <Sounds isPlaying={isPlaying} />
+        <div id="MyClockDisplay" className="clockdalam"></div>
+        <div className="sound">
+          <Sound isPlaying={isPlaying} toggleAudio={toggleAudio} />
+        </div>
       </div>
-     
+
       <div className="judul">
         <b>
           <h1>Home</h1>
@@ -101,7 +111,7 @@ function Desktop1() {
       </div>
       <div className="video">
         <div className="row mt-1">
-          <div className="col-md desc">
+          <div className="desc">
             <h2>Apa itu BalTara ?</h2>
             <br />
             <p className="tekspanjang">
@@ -119,9 +129,8 @@ function Desktop1() {
             </p>
           </div>
           <div className="video-container">
-  <Youtube className="responsive-video" />
-</div>
-
+            <Youtube className="responsive-video" />
+          </div>
         </div>
       </div>
       <div className="row">
