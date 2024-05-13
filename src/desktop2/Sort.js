@@ -1,30 +1,36 @@
 import React, { useEffect, useState } from "react";
-import "./sort.css"
+import "./sort.css";
 
-export default function Search({ foodList, setFoodList }) {
-    const [originalList, setOriginalList] = useState([]);
+export default function Sort({ foodList, setFoodList }) {
+  const [originalList, setOriginalList] = useState([]);
 
-    useEffect(() => {
-        setOriginalList(foodList);
-    }, [foodList, setOriginalList]);
+  useEffect(() => {
+    setOriginalList(foodList);
+  }, [foodList]);
 
-    const search = (event) => {
-        const value = event.target.value.toLowerCase();
+  const sort = (event) => {
+    const value = event.target.value.toLowerCase();
 
-        if (value === "default") {
-            setFoodList(originalList);
-        } else if (value === "alpha") {
-            const sortedList = [...foodList].sort((a, b) => a.name.localeCompare(b.name));
-            setFoodList(sortedList);
-        }
-    };
+    if (value === "default") {
+      setFoodList(originalList);
+    } else if (value === "alpha") {
+      const sortedList = [...foodList].sort((a, b) =>
+        a.name.localeCompare(b.name)
+      );
+      setFoodList(sortedList);
+    } else if (value === "rating") {
+      const sortedList = [...foodList].sort((a, b) => b.rating - a.rating);
+      setFoodList(sortedList);
+    }
+  };
 
-    return (
-        <div className="search w-15">
-            <select className="form-select select-control" aria-label="Default select" onChange={search}>
-                <option value="default">Default</option>
-                <option value="alpha">A-Z</option>
-            </select>
-        </div>
-    );
+  return (
+    <div className="search w-15">
+      <select className="form-select select-control" aria-label="Sort select" onChange={sort}>
+        <option value="default">Default</option>
+        <option value="alpha">A-Z</option>
+        <option value="rating">Rating</option>
+      </select>
+    </div>
+  );
 }

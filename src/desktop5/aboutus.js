@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
-import "./aboutus.css"; // Pastikan CSS untuk komponen diimpor
+import "./aboutus.css";
 import Swiper from "swiper";
 import instagram from "./ig.png";
 import Footer from "../footer/footer";
 
 const AboutUs = () => {
   useEffect(() => {
-    // Inisialisasi Swiper setelah komponen dimuat
     const swiper = new Swiper(".mySwiper", {
       effect: "coverflow",
       grabCursor: true,
@@ -20,11 +19,10 @@ const AboutUs = () => {
         slideShadows: true,
       },
     });
-    // Jangan lupa membersihkan Swiper jika komponen dihapus
     return () => {
       swiper.destroy();
     };
-  }, []); // Inisialisasi hanya sekali setelah komponen dimuat
+  }, []);
 
   return (
     <div>

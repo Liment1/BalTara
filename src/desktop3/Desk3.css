@@ -1,3 +1,4 @@
+/* bb530be132a14d10cfcd1cb13990947323afd63 */
 @import url("https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Style untuk gambar */
@@ -68,18 +69,18 @@
     margin-right: 60px;
 }
 
-/* Media queries untuk layar berukuran kecil */
+/* Media queries */
 @media screen and (max-width: 768px) {
     .gambar {
         max-width: 90%;
-        margin-left: 10px; /* Geser ke kanan agar gambar tidak menempel ke kiri */
-        margin-right: auto; /* Geser ke kanan agar gambar tidak menempel ke kiri */
+        margin-left: 10px;
+        margin-right: auto;
     }
 
     .tulisan {
         width: 90%;
-        margin-left: auto; /* Geser ke kanan agar deskripsi tidak menempel ke kiri */
-        margin-right: auto; /* Geser ke kanan agar deskripsi tidak menempel ke kiri */
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 

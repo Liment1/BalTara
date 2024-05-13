@@ -16,7 +16,7 @@ function App() {
 
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Navbar />}>
+              <Route path="/" element={<Navbar />}>
             <Route
               index
               element={
@@ -30,7 +30,7 @@ function App() {
             <Route
               path="foods/:id"
               element={
-                <div>
+                <div className="Desk3">
                   <Desktop3 />
                 </div>
               }
