@@ -1,19 +1,39 @@
-/* Desk3.css */
 @import url("https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 /* Style untuk gambar */
 .gambar {
     max-width: 100%;
     margin: 30px auto; /* Tengahkan gambar */
-    max-height: 400px;
+    max-height: 500px;
     border-radius: 20px;
     filter: drop-shadow(0 0 10px rgb(0, 60, 67, 1));   
     margin-left: 70px; 
 }
 
+.bgcoba{
+    background: url(batu.jpg);
+   width: fit-content;
+   border-radius: 50px;
+   position: relative;
+    background-size: cover;
+    filter: drop-shadow(0 0 10px rgb(0, 0, 0, 0.8));   
+}
+
+.Description{
+    background-color: #3A4D39;
+}
+
+.foodDetails{
+    background-color: #3A4D39;
+}
+
+.tombol{
+    background-color: #3A4D39;
+}
+
 /* Style untuk deskripsi */
 .tulisan {
-    background-color: #1b2f31;
+    background-color: #445D48;
     text-align: left;
     width: 90%;
     margin: 30px auto; /* Tengahkan deskripsi */
@@ -22,27 +42,18 @@
     padding: 25px;
     filter: drop-shadow(0 0 10px rgb(0, 60, 67, 1));  
     margin-left: 90px;
+    font-family: "Poppins", sans-serif;
 }
 
 /* Style untuk nama makanan */
 .namamakan {
-    margin-left: 20px;
-    color: #42686b;
+    /* margin-left: 20px; */
+    color: #B99470;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
 }
 
-/* Style untuk tombol */
-.bn62 {
-    color: #1cc49d;
-    background-color: #1b2f31;
-    border-radius: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 3em;
-    width: 8em;
-    font-size: large;
-    font-weight: 600;
-}
 
 /* Style untuk tombol */
 .tombol {
@@ -68,4 +79,73 @@
         margin-left: auto; /* Geser ke kanan agar deskripsi tidak menempel ke kiri */
         margin-right: auto; /* Geser ke kanan agar deskripsi tidak menempel ke kiri */
     }
+}
+
+.learn-more {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 15px;
+}
+
+.learn-more {
+  font-weight: 600;
+  color: #B99470;
+  text-transform: uppercase;
+  padding: 1.25em 2em;
+  background: #D2E3C8;
+  border: 2px solid #5F6F52;
+  border-radius: 0.75em;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.learn-more::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #739072;
+  border-radius: inherit;
+  box-shadow: 0 0 0 2px #4F6F52, 0 0.625em 0 0 #86A789;
+  transform: translate3d(0, 0.75em, -1em);
+  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+}
+
+.learn-more:hover {
+  background: #C3E2C2;
+  transform: translate(0, 0.25em);
+}
+
+.learn-more:hover::before {
+  box-shadow: 0 0 0 2px #527853, 0 0.5em 0 0 #A7D397;
+  transform: translate3d(0, 0.5em, -1em);
+}
+
+.learn-more:active {
+  background: #445D48;
+  transform: translate(0em, 0.75em);
+}
+
+.learn-more:active::before {
+  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+  transform: translate3d(0, 0, -1em);
+}
+
+button{
+    background: transparent;
+    color: transparent;
+    border-color: transparent;
 }

@@ -43,7 +43,6 @@ function App() {
           <Offcanvas.Title>BalTara</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {/* Musik dimainkan secara otomatis tanpa tombol kontrol */}
           <h3 className="text-center text-sm menu">Main Menu</h3>
           <hr />
           <div className="d-grid">

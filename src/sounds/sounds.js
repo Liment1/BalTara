@@ -1,5 +1,5 @@
 import React from "react";
-import backgroundMusic from "./ratuanom.mp3"; // Ganti dengan path file musik Anda
+import backgroundMusic from "./ratuanom.mp3"; 
 
 function Sounds() {
   const [isPlaying, setIsPlaying] = React.useState(true);
