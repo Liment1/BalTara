@@ -11,7 +11,7 @@ function Desk3() {
   const [currFood, setcurrFood] = useState({});
   let par = useParams();
   let id = Number(par.id);
-  const { foodF: foodList, loading, error } = useFoodFetch()
+  const { foodF: foodList, loading, error } = useFoodFetch();
   const [index, setIndx] = useState(id);
 
   useEffect(() => {
@@ -34,8 +34,8 @@ function Desk3() {
     <div className="foodDetails">
       {foodList && <DescComp name={currFood.name} link={imageList[index]} desc={currFood.description} />}
       <div className="d-flex justify-content-center tombol">
-        <a href={`/foods/${(id + 11) % 12}`} className="bn62 left" onClick={subIndex}><span className="bn31span">Prev</span></a>
-        <a href={`/foods/${(id + 13) % 12}`} className="bn62 right" onClick={addIndex}><span className="bn31span">Next</span></a>
+        <button><a href={`/foods/${(id + 11) % 12}`} className="learn-more" onClick={subIndex}><span className="bn31span">Prev</span></a></button>
+        <button><a href={`/foods/${(id + 13) % 12}`} className="learn-more" onClick={addIndex}><span className="bn31span">Next</span></a></button>
       </div>
     </div>
   );

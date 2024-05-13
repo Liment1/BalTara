@@ -4,7 +4,8 @@ function DescComp(props) {
 
     return (
         <div className="Description">
-            <h1 className="namamakan">{props.name}</h1>
+              <h1 className="namamakan">{props.name}</h1>
+            <div className="bgcoba">
             <div className="row align-items-start">
                 <div className="col-md-5">
                     <img src={props.link} alt={"gambar " + props.name} className="gambar"></img>
@@ -12,6 +13,7 @@ function DescComp(props) {
                 <div className="col-md-6">
                     <p className="tulisan">{props.desc}</p>
                 </div>
+            </div>
             </div>
         </div>
     );

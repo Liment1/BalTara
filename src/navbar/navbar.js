@@ -7,7 +7,7 @@ import foods from "./restaurant.png";
 import abtus from "./abtus.png";
 import support from "./support.png";
 import iconbali from "./iconbali.png";
-import {Outlet, Link} from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import music from "./ratuanom.mp3";
 
 function App() {
@@ -25,7 +25,7 @@ function App() {
     <div className="jancoks">
       {!showOffcanvas && (
         <button
-          className="btn btn-secondary"
+          className="btn buttonnav btn-secondary"
           type="button"
           onClick={handleOffcanvasToggle}
         >
@@ -43,17 +43,16 @@ function App() {
           <Offcanvas.Title>BalTara</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          {/* Musik dimainkan secara otomatis tanpa tombol kontrol */}
           <h3 className="text-center text-sm menu">Main Menu</h3>
           <hr />
           <div className="d-grid">
             <div className="mainmenu">
               <Link to="/" className="btn btn-home">
-                  <img src={home} alt="Home"/>
-                  <span className="home1">Home</span>
+                <img src={home} alt="Home" />
+                <span className="home1">Home</span>
               </Link>
               <Link to="/foods/0" className="btn btn-foods">
-                <img src={foods} alt="Foods"/>
+                <img src={foods} alt="Foods" />
                 <span className="foods1">Foods</span>
               </Link>
               <Link to="/abtus" className="btn btn-abtus">
@@ -83,7 +82,7 @@ function App() {
           </div>
         </Offcanvas.Body>
       </Offcanvas>
-    <Outlet/>
+      <Outlet />
     </div>
   );
 }

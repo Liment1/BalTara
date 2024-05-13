@@ -1,9 +1,14 @@
-.container{
- overflow: hidden; 
- margin: 0;
- padding: 0;
+.container {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
 }
 
-.desc1{
+.desc1 {
   margin: 0;
+}
+
+.buttonnav {
+  position: relative;
+  z-index: 2;
 }

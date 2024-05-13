@@ -1,21 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-.desktop2{
-    font-size: 4vw;
-    margin-top: 3vh;
-    color: white;
-    text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
+.desktop2 {
+  font-size: 4vw;
+  margin-top: 3vh;
+  color: white;
+  text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
 }
 
-body{
-    background-color: #181818;
+body {
+  background-color: #181818;
 }
 
-.desktop2 h3{
-    margin-left: 28px;
-    font-size: 4vw;
-    text-align: left;
-    text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
+.desktop2 h3 {
+  margin-left: 28px;
+  font-size: 4vw;
+  text-align: left;
+  text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
 }
 
 /* .bg {
@@ -58,76 +58,105 @@ body{
 } */
 
 .map-container {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .map {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
-    grid-template-rows: repeat(3, auto);
-    gap: 40px;
-    max-width: 80%;
-    text-align: center;
-    margin-bottom: 30px;
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    margin-left: 10vw;
-    text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
-    margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  grid-template-rows: repeat(3, auto);
+  gap: 0;
+  max-width: 80%;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  margin-left: 10vw;
+  text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
 }
 
-.descrip{
-    margin-top: 10px;
-    font-size: 20px;
-    text-align: left;
+.descrip {
+  margin-top: 10px;
+  font-size: 20px;
+  text-align: left;
 }
 
-.name{
-    font-size: 20px;
-    text-align: left;
-    background-color: rgb(155, 28, 28);  
-    border-radius: 10px; 
-    padding: 10px;
+.name {
+  font-size: 20px;
+  text-align: left;
+  background-color: rgb(155, 28, 28);
+  border-radius: 10px;
+  padding: 10px;
 }
 
 .card {
-    background-color: #1F1D1D;
-    color: white;
-    padding: 10px;
-    height: 60vh; 
-    border-radius: 20px;
+  background-color: #1f1d1d;
+  color: white;
+  padding: 10px;
+  height: 60vh;
+
+  border-radius: 20px;
+  position: relative;
+  z-index: 1;
 }
 
-
 .card img {
-    max-width: 75vw;
-    height: 40vh ;
-    object-fit:cover; 
+  width: auto;
+  height: 330px;
+  object-fit: cover;
 }
 
 @media (max-width: 768px) {
-    .map {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
+  .map {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 480px) {
-    .map {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
+  .map {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
 }
 
-.desktop2 p{
-    font-size: 4vw; 
-    margin-top: 3vh;
-    color: white;
-    text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
-    font-weight: bold;
-    font-family: "Poppins", sans-serif;
-    text-align: left;
+.desktop2 p {
+  font-size: 40px;
+
+  color: white;
+  text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  text-align: left;
 }
 
-.tag{
-    font-size: 20px;
+.tagtext {
+  padding: 0 30px 0 5px;
+
+  text-align: start;
+  font-size: 20px !important;
+  font-weight: 200 !important;
+  z-index: 3;
+  position: absolute; /* Gunakan posisi absolut untuk teks */
+  margin-top: 55px;
+  top: 10px; /* Sesuaikan dengan posisi yang diinginkan */
+  left: 10px; /* Sesuaikan dengan posisi yang diinginkan */
+  color: white; /* Sesuaikan dengan warna yang diinginkan */
+  background-color: #ff0000; /* Warna latar belakang merah */
+  border-top-right-radius: 140px; /* Ujung runcing di kanan atas */
+  border-bottom-right-radius: 140px; /* Ujung runcing di kanan bawah */
+}
+
+.rating {
+  position: absolute;
+  z-index: 1;
+}
+
+@media (max-width: 1044px) {
+  .desktop2 p {
+    font-size: 30px;
+  }
+  .card img {
+    width: auto;
+  }
 }

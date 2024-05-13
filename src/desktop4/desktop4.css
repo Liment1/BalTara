@@ -22,7 +22,7 @@ body {
   background-size: cover;
   background-position: center;
   align-items: center;
-  height: 850px;
+  height: 690px;
 }
 
 .suggestions {
@@ -35,7 +35,7 @@ body {
   border-radius: 10px;
   color: white;
   margin: 20px;
-  width: 80%;
+  width: 50%;
   height: 20vh;
 }
 
@@ -91,8 +91,14 @@ body {
   transform: scale(0.95);
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 1367px) {
   .contact-form {
-    height: 700px;
+    height: 100vh;
+    padding-top: 200px;
   }
-} */
+
+  .suggestionsisi,
+  .namakotakisi {
+    font-size: 10px;
+  }
+}
