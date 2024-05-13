@@ -299,17 +299,64 @@ body {
 
 .clock {
   position: absolute;
-  top: 40px; /* Menempatkan jam di bagian atas */
-  right: 20px; /* Menempatkan jam di bagian kanan */
-  font-size: 2vw; /* Ukuran font responsif */
+  top: 20px;
+  right: 20px;
+  font-size: 2vw; 
   color: white;
-  letter-spacing: 1px; /* Spasi antar huruf */
-  z-index: 999; /* Mengatur kedalaman tumpukan */
+  letter-spacing: 1px;
+  z-index: 999;
   font-family: "Poppins", sans-serif;
   font-weight: bold;
   text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
+  width: 200px;
 }
+
+@media (max-width: 768px) {
+  .clock {
+    font-size: 4vw; 
+  }
+}
+
+
+.play {
+  position: absolute; /* Tambahkan properti ini */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  top: 20px; /* Sesuaikan posisi vertikal */
+  right: 220px; /* Sesuaikan posisi horizontal */
+}
+
+.play:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .play {
+    font-size: 12px;
+    top: 40px; /* Sesuaikan posisi vertikal ketika layar diminimalkan */
+    right: 20px; /* Sesuaikan posisi horizontal ketika layar diminimalkan */
+  }
+}
+
+
+
 
 .tekspanjang {
   min-width: 30vw;
 }
+
+.video-container {
+  width: 90%; /* Lebar video-container menjadi 90% dari lebar layar */
+  margin: auto; /* Posisi video-container di tengah */
+}
+
+.responsive-video {
+  width: 30%; /* Lebar video menjadi 100% dari lebar video-container */
+  height: auto; /* Tinggi video menyesuaikan proporsi aspek */
+}
+

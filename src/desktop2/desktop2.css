@@ -92,11 +92,11 @@
   background-color: #1f1d1d;
   color: white;
   padding: 10px;
-  height: 60vh;
-
+  height: 405px;
   border-radius: 20px;
   position: relative;
   z-index: 1;
+  margin-bottom: 20px;
 }
 
 .card img {

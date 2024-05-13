@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
+import "./sort.css";
 
 export default function Sort({ foodList, setFoodList }) {
-    const [originalList, setOriginalList] = useState([]);
+  const [originalList, setOriginalList] = useState([]);
 
-    useEffect(() => {
-        setOriginalList(foodList);
-    }, [foodList]);
+  useEffect(() => {
+    setOriginalList(foodList);
+  }, [foodList]);
 
-    const sort = (event) => {
-        const value = event.target.value.toLowerCase();
+  const sort = (event) => {
+    const value = event.target.value.toLowerCase();
 
         if (value === "default") {
             setFoodList(originalList);
@@ -21,13 +22,13 @@ export default function Sort({ foodList, setFoodList }) {
         }
     };
 
-    return (
-        <div className="searchBar w-25">
-            <select className="form-select" aria-label="Sort select" onChange={sort}>
-                <option value="default">Default</option>
-                <option value="alpha">A-Z</option>
-                <option value="rating">Rating</option>
-            </select>
-        </div>
-    );
+  return (
+    <div className="searchBar w-25">
+      <select className="form-select" aria-label="Sort select" onChange={sort}>
+        <option value="default">Default</option>
+        <option value="alpha">A-Z</option>
+        <option value="rating">Rating</option>
+      </select>
+    </div>
+  );
 }

@@ -1,0 +1,26 @@
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 38%;
+
+@media screen and (max-width: 768px) {
+        margin-right: 38%; 
+        width: 100%;
+    }
+}
+
+.input-control,
+.select-control {
+    background-color: #524C42; /* Warna abu-abu gelap */
+    border-color: #E8DFCA; /* Warna border */
+    border-width: 4px; /* Ketebalan border */
+    border-radius: 20px; /* Border radius */
+    color: white; /* Warna teks */
+}
+
+.input-control::placeholder,
+.select-control {
+    color: white; /* Warna teks untuk placeholder/input */
+}
+
