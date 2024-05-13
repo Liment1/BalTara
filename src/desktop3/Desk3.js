@@ -15,11 +15,12 @@ function Desk3() {
 
   useEffect(() => {
     if (foodList.length > 0) {
+      setIndx(id);
       setcurrFood(foodList.find(food => {
         return Number(food.id) === index;
       }));
     }
-  }, [foodList, index]);
+  }, [foodList, index, id]);
 
   function subIndex() {
     setIndx((index + 11) % 12);
