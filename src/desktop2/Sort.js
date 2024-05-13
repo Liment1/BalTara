@@ -11,16 +11,18 @@ export default function Sort({ foodList, setFoodList }) {
   const sort = (event) => {
     const value = event.target.value.toLowerCase();
 
-        if (value === "default") {
-            setFoodList(originalList);
-        } else if (value === "alpha") {
-            const sortedList = [...foodList].sort((a, b) => a.name.localeCompare(b.name));
-            setFoodList(sortedList);
-        } else if (value === "rating") {
-            const sortedList = [...foodList].sort((a, b) => b.rating - a.rating);
-            setFoodList(sortedList);
-        }
-    };
+    if (value === "default") {
+      setFoodList(originalList);
+    } else if (value === "alpha") {
+      const sortedList = [...foodList].sort((a, b) =>
+        a.name.localeCompare(b.name)
+      );
+      setFoodList(sortedList);
+    } else if (value === "rating") {
+      const sortedList = [...foodList].sort((a, b) => b.rating - a.rating);
+      setFoodList(sortedList);
+    }
+  };
 
   return (
     <div className="searchBar w-25">
