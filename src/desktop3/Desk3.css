@@ -4,7 +4,7 @@
 /* Style untuk gambar */
 .gambar {
     max-width: 100%;
-    margin: 30px auto; /* Tengahkan gambar */
+    margin: 30px auto;
     max-height: 500px;
     border-radius: 20px;
     filter: drop-shadow(0 0 10px rgb(0, 60, 67, 1));   

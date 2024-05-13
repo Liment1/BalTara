@@ -8,7 +8,6 @@ import abtus from "./abtus.png";
 import support from "./support.png";
 import iconbali from "./iconbali.png";
 import { Outlet, Link } from "react-router-dom";
-import music from "./ratuanom.mp3";
 
 function App() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -47,6 +46,7 @@ function App() {
           <hr />
           <div className="d-grid">
             <div className="mainmenu">
+
               <Link to="/" className="btn btn-home">
                 <img src={home} alt="Home" />
                 <span className="home1">Home</span>

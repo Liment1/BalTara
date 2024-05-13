@@ -45,6 +45,7 @@ function Desktop2() {
                                   link={food.link}
                                   tag={food.tag}
                                   rating={food.rating}
+                                  key={food.id}
                               />
                           </div>
                       );

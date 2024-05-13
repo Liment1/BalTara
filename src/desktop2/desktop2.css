@@ -15,45 +15,6 @@
   text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
 }
 
-/* .bg {
-    background-color: transparent;
-    border-radius: 25px;
-    border-color: transparent;
-    box-sizing: border-box;
-    position: relative; 
-}
-
-
-.bg::before {
-    content: "";
-    position: absolute;
-    top: -4px;
-    left: -2px;
-    bottom: -4px;
-    right: -3px;
-    background-image: linear-gradient(57deg, #1f1f1f, #555555, #a1a0a0);
-    background-size: 300%;
-    z-index: -1; 
-    animation: gradient 3s linear infinite;
-    animation-direction: alternate;
-    border-radius: 20px;
-}
-
-
-@keyframes gradient{
-	0% {
-		background-position: 0% 50%;
-	}
-
-	50% {
-		background-position: 100% 50%;
-	}
-
-	100% {
-		background-color: 0% 50%;
-	}
-} */
-
 .map-container {
   display: flex;
   justify-content: center;
@@ -96,7 +57,21 @@
   border-radius: 20px;
   position: relative;
   z-index: 1;
+  transition: all 1.6s, transform .2s;
   margin-bottom: 20px;
+  opacity: 0;
+  transform: translate(0, 10vh);
+}
+
+.card.visible {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+.card:hover {
+  -ms-transform: scale(1.5);
+  -webkit-transform: scale(1);
+  transform: scale(1.1);
 }
 
 .card img {
