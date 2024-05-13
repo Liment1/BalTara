@@ -131,8 +131,10 @@ body {
 }
 
 .tagtext {
-  padding: 5px 10px;
-  font-size: 8px;
+  padding: 0 30px 0 5px;
+
+  text-align: start;
+  font-size: 20px !important;
   font-weight: 200 !important;
   z-index: 3;
   position: absolute; /* Gunakan posisi absolut untuk teks */
