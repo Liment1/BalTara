@@ -1,5 +1,5 @@
 import Card from "./Card.js";
-import useFoodFetch from "../desktop3/components/foodList.js";
+import useFoodFetch from "../components/foodList.js";
 import imageList from "./images";
 import Search from "./Search.js";
 import Find from "./Find.js";

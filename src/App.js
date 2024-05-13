@@ -17,7 +17,7 @@ function App() {
       <BrowserRouter>
         <Progress />
         <Routes>
-          <Route path="/" element={<Navbar />}>
+              <Route path="/" element={<Navbar />}>
             <Route
               index
               element={
