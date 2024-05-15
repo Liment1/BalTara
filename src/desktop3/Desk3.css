@@ -11,16 +11,16 @@
     margin-left: 70px; 
 }
 
-.bgcoba{
+.bgcoba {
     background: url(batu.jpg);
-   width: fit-content;
-   border-radius: 50px;
-   position: relative;
+    width: fit-content;
+    border-radius: 50px;
+    position: relative;
     background-size: cover;
     filter: drop-shadow(0 0 10px rgb(0, 0, 0, 0.8));   
 }
 
-.Description{
+.Description {
     background-color: #3A4D39;
 }
 
@@ -46,13 +46,12 @@
     font-weight: bold;
 }
 
-
-.foodDetails{
-  background-color: #3A4D39;
+.foodDetails {
+    background-color: #3A4D39;
 }
 
-.tombol{
-  background-color: #3A4D39;
+.tombol {
+    background-color: #3A4D39;
 }
 
 /* Style untuk tombol */
@@ -70,81 +69,104 @@
 @media screen and (max-width: 768px) {
     .gambar {
         max-width: 90%;
-        margin-left: 10px;
+        margin-left: 15px;
+        margin-right: auto;
+    }
+
+    .bgcoba {
+        margin-left: auto;
         margin-right: auto;
     }
 
     .tulisan {
-        width: 90%;
+        width: 80%;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .namamakan {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .foodDetails {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .gambar,
+    .bgcoba,
+    .tulisan,
+    .namamakan,
+    .foodDetails {
+        width: 100%;
     }
 }
 
 .learn-more {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  font-family: inherit;
-  font-size: 15px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    outline: none;
+    border: 0;
+    vertical-align: middle;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 15px;
 }
 
 .learn-more {
-  font-weight: 600;
-  color: #B99470;
-  text-transform: uppercase;
-  padding: 1.25em 2em;
-  background: #D2E3C8;
-  border: 2px solid #5F6F52;
-  border-radius: 0.75em;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
-  margin-bottom: 40px;
-  margin-top: 20px;
+    font-weight: 600;
+    color: #B99470;
+    text-transform: uppercase;
+    padding: 1.25em 2em;
+    background: #D2E3C8;
+    border: 2px solid #5F6F52;
+    border-radius: 0.75em;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
+    margin-bottom: 40px;
+    margin-top: 20px;
 }
 
 .learn-more::before {
-  position: absolute;
-  content: '';
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #739072;
-  border-radius: inherit;
-  box-shadow: 0 0 0 2px #4F6F52, 0 0.625em 0 0 #86A789;
-  transform: translate3d(0, 0.75em, -1em);
-  transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #739072;
+    border-radius: inherit;
+    box-shadow: 0 0 0 2px #4F6F52, 0 0.625em 0 0 #86A789;
+    transform: translate3d(0, 0.75em, -1em);
+    transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
 }
 
 .learn-more:hover {
-  background: #C3E2C2;
-  transform: translate(0, 0.25em);
+    background: #C3E2C2;
+    transform: translate(0, 0.25em);
 }
 
 .learn-more:hover::before {
-  box-shadow: 0 0 0 2px #527853, 0 0.5em 0 0 #A7D397;
-  transform: translate3d(0, 0.5em, -1em);
+    box-shadow: 0 0 0 2px #527853, 0 0.5em 0 0 #A7D397;
+    transform: translate3d(0, 0.5em, -1em);
 }
 
 .learn-more:active {
-  background: #445D48;
-  transform: translate(0em, 0.75em);
+    background: #445D48;
+    transform: translate(0em, 0.75em);
 }
 
 .learn-more:active::before {
-  box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
-  transform: translate3d(0, 0, -1em);
+    box-shadow: 0 0 0 2px #b18597, 0 0 #ffe3e2;
+    transform: translate3d(0, 0, -1em);
 }
 
-button{
+button {
     background: transparent;
     color: transparent;
     border-color: transparent;

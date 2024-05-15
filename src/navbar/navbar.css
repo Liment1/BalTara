@@ -2,6 +2,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+.menu{
+    width: 30px;
+}
+
 .btn {
     position: fixed;
     margin-top: 100px;
@@ -21,9 +25,9 @@ body {
     display: inline-flex;
     align-items: center;
     gap: .75rem;
-    background-color: transparent; /* Make background transparent */
-    color: #fff;
-    border: 2px solid #8B322C; /* Add border with desired color */
+    background-color: transparent; 
+    color: #6B240C;
+    border: 2px solid #994D1C; 
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     font-weight: 600;
@@ -48,8 +52,8 @@ body {
     width: 25px;
     height: 25px;
     position: relative;
-    color: #00215E;
-    background-color: #F2613F;
+    color: #F6F1E9;
+    background-color: #6B240C;
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -115,7 +119,7 @@ body {
     text-align: center;
     font-size: 30px;
     margin-top: 10px;
-    font-family: 'Biryani', sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
@@ -138,6 +142,7 @@ body {
 
 .offcanvas-body h3 {
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* Home */
@@ -161,6 +166,7 @@ body {
     font-size: 14px;
     color: white;
     margin-left: 2vh;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-home span:hover {
@@ -188,6 +194,7 @@ body {
     font-size: 14px;
     color: white;
     margin-left: 2vh;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-foods span:hover {
@@ -215,6 +222,8 @@ body {
     font-size: 14px;
     color: white;
     margin-left: 2vh;
+    width: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-abtus span:hover {
@@ -242,6 +251,8 @@ body {
     font-size: 14px;
     color: white;
     margin-left: 2vh;
+    width: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .btn-support span:hover {
