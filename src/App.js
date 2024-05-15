@@ -21,7 +21,7 @@ function App() {
                 <div>
                   <Desktop1 />
                   <Desktop2 />
-                  <Footer />
+                  <Footer/>
                 </div>
               }
             />
