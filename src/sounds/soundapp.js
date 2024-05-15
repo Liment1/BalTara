@@ -1,21 +1,22 @@
 import Sounds from "./sounds";
 import React, { useState } from "react";
+
 function SoundApp() {
   const [isPlaying, setIsPlaying] = useState(false);
 
   function togglePlay() {
     setIsPlaying((prevState) => !prevState);
   }
-  function handlePlay() {
-    // Change isPlaying state when play button is clicked
-    setIsPlaying(true);
-  }
 
   return (
     <div className="SoundApp">
-      <button className="play" onClick={togglePlay}>
-        {isPlaying ? "Pause" : "Play"}
-      </button>
+      <div className="keisen">
+        <label>
+          <input className="play-btn" type="checkbox" checked={isPlaying} onChange={togglePlay} />
+          <div className="play-icon"></div>
+          <div className="pause-icon"></div>
+        </label>
+      </div>
       <Sounds isPlaying={isPlaying} />
     </div>
   );
