@@ -33,12 +33,14 @@
   margin-left: 10vw;
   text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
   margin-top: 20px;
+  overflow: hidden; 
 }
 
 .descrip {
   margin-top: 10px;
   font-size: 20px;
   text-align: left;
+  overflow: hidden; 
 }
 
 .name {
@@ -61,23 +63,33 @@
   margin-bottom: 20px;
   opacity: 0;
   transform: translate(0, 10vh);
+ 
 }
 
 .card.visible {
   opacity: 1;
   transform: translate(0, 0);
+  overflow: hidden; 
 }
 
 .card:hover {
   -ms-transform: scale(1.5);
   -webkit-transform: scale(1);
   transform: scale(1.1);
+  overflow: hidden; 
 }
+
 
 .imageCard {
   width: auto;
   height: 330px;
   object-fit: cover;
+  overflow: hidden; 
+}
+
+.imageCard:hover {
+  object-fit: center; /* Zoom sedikit saat hover */
+  overflow: hidden; 
 }
 
 @media (max-width: 768px) {
@@ -104,7 +116,7 @@
 
 .tagtext {
   padding: 0 30px 0 5px;
-
+  transition: all 0.5s ease;
   text-align: start;
   font-size: 20px !important;
   font-weight: 200 !important;
@@ -117,6 +129,16 @@
   background-color: #ff0000; /* Warna latar belakang merah */
   border-top-right-radius: 140px; /* Ujung runcing di kanan atas */
   border-bottom-right-radius: 140px; /* Ujung runcing di kanan bawah */
+}
+
+.card:hover .tagtext {
+  animation: tagtextAnimation 0.5s ease infinite; /* Animasi bergoyang saat hover */
+}
+
+@keyframes tagtextAnimation {
+  0% { transform: translateY(-2px); }
+  50% { transform: translateY(2px); }
+  100% { transform: translateY(-2px); }
 }
 
 .rating {
