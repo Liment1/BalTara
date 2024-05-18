@@ -1,13 +1,13 @@
 .input-control,
 .select-control {
-    background-color: #524C42; /* Warna abu-abu gelap */
-    border-color: #E8DFCA; /* Warna border */
-    border-width: 4px; /* Ketebalan border */
-    border-radius: 20px; /* Border radius */
-    color: white; /* Warna teks */
+    background-color: #524C42;
+    border-color: #E8DFCA;
+    border-width: 4px;
+    border-radius: 20px;
+    color: white;
 }
 
 .input-control::placeholder,
 .select-control {
-    color: white; /* Warna teks untuk placeholder/input */
+    color: white;
 }

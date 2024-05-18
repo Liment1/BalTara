@@ -5,7 +5,7 @@ import imageList from "./images";
 import Search from "./Search.js";
 import Find from "./Find.js";
 import Sort from "./Sort.js";
-import "./desktop2.css"; // Ensure this includes the styles
+import "./desktop2.css";
 
 function Desktop2() {
     const { foodF: startFoodList, loading, error } = useFoodFetch();

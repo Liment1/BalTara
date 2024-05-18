@@ -4,91 +4,18 @@ body {
 
 .btn {
     position: fixed;
-    margin-top: 100px;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;
-    width: 90px;
-    height: 35px;
-}
-
-.btn p {
-    font-family: 'Poppins', sans-serif;
-}
-
-.button {
-    line-height: 1;
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    gap: .75rem;
-    background-color: transparent; /* Make background transparent */
-    color: #fff;
-    border: 2px solid #8B322C; /* Add border with desired color */
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    font-weight: 600;
-    padding: .75rem 1.5rem;
-    padding-left: 20px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: background-color .3s, border-color .3s; /* Transition for smooth effect */
-    position: fixed;
-    margin-top: 100px;
-    width: 120px;
-}
-
-.button:hover {
-    background-color: rgba(139, 50, 44, 0.1); /* Lighten background color on hover */
-    border-color: #000; /* Change border color on hover */
-}
-
-.button__icon-wrapper {
-    flex-shrink: 0;
-    width: 25px;
-    height: 25px;
-    position: relative;
-    color: #00215E;
-    background-color: #F2613F;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-}
-
-.button:hover .button__icon-wrapper {
-    color: #000;
-}
-
-.button__icon-svg--copy {
-    position: absolute;
-    transform: translate(-150%, 150%);
-}
-
-.button:hover .button__icon-svg:first-child {
-    transition: transform .3s ease-in-out;
-    transform: translate(150%, -150%);
-}
-
-.button:hover .button__icon-svg--copy {
-    transition: transform .3s ease-in-out .1s;
-    transform: translate(0);
-}
-
-@media (max-width: 768px) {
-    .button {
-        width: 50px;
-        height: 25px;
-    }
+    background-color: rgba(32, 30, 30, 1);
+    /* margin-top: 100px; */
+   /* width: 100vw;  */
 }
 
 .offcanvas {
-    background-color: rgba(32, 30, 30, 0.8);
-    color: white;
+    background-color: rgba(32, 30, 30, 0.8); 
+    color: white; 
     width: 300px;
 }
 
-.logo img {
+.logo img{
     width: 50px;
     height: 50px;
     text-align: center;
@@ -97,22 +24,22 @@ body {
 }
 
 .custom-offcanvas {
-    max-width: 200px;
+    max-width: 200px; 
 }
 
 .offcanvas-header.logo {
-    width: 100%;
+    width: 100%; 
     margin-top: 20px;
 }
 
 .offcanvas-header.logo img {
-    width: 40px;
-    margin: 0 auto;
+    width: 40px; 
+    margin: 0 auto; 
     display: block;
 }
 
 .offcanvas-header .offcanvas-title {
-    text-align: center;
+    text-align: center; 
     font-size: 30px;
     margin-top: 10px;
     font-family: 'Biryani', sans-serif;
@@ -126,17 +53,17 @@ body {
 }
 
 .custom-search {
-    background-color: rgba(32, 30, 30, 0.8);
-    border: none;
+    background-color: rgba(32, 30, 30, 0.8); 
+    border: none; 
     border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); 
 }
 
-.custom-search::placeholder {
+.custom-search::placeholder{
     color: white;
 }
 
-.offcanvas-body h3 {
+.offcanvas-body h3{
     text-align: center;
 }
 
@@ -148,7 +75,7 @@ body {
     border: none;
     padding: 0;
     cursor: pointer;
-    margin-top: 0px;
+    margin-top: 0px; 
 }
 
 .mainmenu .btn-home img {
@@ -163,7 +90,7 @@ body {
     margin-left: 2vh;
 }
 
-.btn-home span:hover {
+.btn-home span:hover{
     text-decoration: underline;
 }
 
@@ -190,7 +117,7 @@ body {
     margin-left: 2vh;
 }
 
-.btn-foods span:hover {
+.btn-foods span:hover{
     text-decoration: underline;
 }
 
@@ -217,7 +144,7 @@ body {
     margin-left: 2vh;
 }
 
-.btn-abtus span:hover {
+.btn-abtus span:hover{
     text-decoration: underline;
 }
 
@@ -244,18 +171,18 @@ body {
     margin-left: 2vh;
 }
 
-.btn-support span:hover {
+.btn-support span:hover{
     text-decoration: underline;
 }
 
-.logo2 img {
+.logo2 img{
     width: 40px;
     height: 40px;
     margin-left: 50px;
 }
 
 /* iconbali */
-.btn-secondary img {
+.btn-secondary img{
     background-color: transparent;
     border: none;
     padding: 0;
@@ -279,7 +206,7 @@ body {
         width: 200px;
     }
 
-    .logo img {
+    .logo img{
         width: 40px;
         height: 40px;
         margin-right: 15px;
@@ -320,23 +247,18 @@ body {
 .musik {
     background-color: #222831;
     margin-top: 20px;
-    margin-left: 25px;
+    margin-left: 25px; 
     color: white;
 }
 
-.musik:hover {
+.musik:hover{
     background-color: black;
 }
 
 .mainmenu {
-    margin-top: 10px;
+    margin-top: 10px; 
 }
 
-.menu {
+.menu{
     margin-top: 0px;
-}
-
-.play {
-    margin-top: 20px;
-    margin-left: 10px;
 }
