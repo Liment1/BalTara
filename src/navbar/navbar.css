@@ -2,16 +2,11 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.menu{
-    width: 30px;
-}
-
 .btn {
     position: fixed;
     margin-top: 100px;
     border-top-right-radius: 80px;
     border-bottom-right-radius: 80px;
-    width: 90px;
     height: 35px;
     z-index: 999px;
 }
@@ -183,7 +178,7 @@ body {
     border: none;
     padding: 0;
     cursor: pointer;
-    margin-top: 60px; /* Larger margin-top */
+    margin-top:55px;
 }
 
 .mainmenu .btn-foods img {
@@ -211,7 +206,7 @@ body {
     border: none;
     padding: 0;
     cursor: pointer;
-    margin-top: 110px; /* Larger margin-top */
+    margin-top: 110px;
 }
 
 .mainmenu .btn-abtus img {
@@ -224,7 +219,6 @@ body {
     font-size: 14px;
     color: white;
     margin-left: 2vh;
-    width: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -240,7 +234,7 @@ body {
     border: none;
     padding: 0;
     cursor: pointer;
-    margin-top: 190px;
+    margin-top: 180px;
 }
 
 .support .btn-support img {
@@ -253,7 +247,6 @@ body {
     font-size: 14px;
     color: white;
     margin-left: 2vh;
-    width: 20px;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -347,9 +340,16 @@ body {
 
 .menu {
     margin-top: 0px;
+    margin-left: 0px;
+    margin-bottom: 10px;
 }
 
 .play {
     margin-top: 20px;
     margin-left: 10px;
 }
+
+    .bottomLine {
+        margin-top: 14px;
+        margin-bottom: 20px;
+    }

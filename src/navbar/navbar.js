@@ -69,7 +69,6 @@ function App() {
         <Offcanvas.Body>
           <h3 className="text-center text-sm menu">Main Menu</h3>
           <hr />
-          <div className="d-grid">
             <div className="mainmenu">
               <Link to="/" className="btn btn-home">
                 <img src={home} alt="Home" />
@@ -90,7 +89,6 @@ function App() {
                 <span class="support1">Support Us</span>
               </Link>
             </div>
-          </div>
           <br />
           <br />
           <br />
@@ -100,7 +98,7 @@ function App() {
           <hr />
           <br />
           <br />
-          <hr />
+          <hr className="bottomLine"/>
           <div className="logo2">
             <img src={pura} alt="Bali Temple" />
           </div>
