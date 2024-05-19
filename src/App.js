@@ -12,7 +12,7 @@ import Footer from "./footer/footer";
 function App() {
   return (
     <div className="container mw-100">
-      <BrowserRouter>
+      <BrowserRouter basename="/PTI-UAS-SM2/">
         <Routes>
           <Route path="/" element={<Navbar />}>
             <Route
@@ -21,7 +21,7 @@ function App() {
                 <div>
                   <Desktop1 />
                   <Desktop2 />
-                  <Footer/>
+                  <Footer />
                 </div>
               }
             />
