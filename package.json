@@ -1,8 +1,7 @@
 {
   "name": "proyek-uas-4",
-  "homepage": "https://gr1c.github.io/PTI-UAS-SM2",
+  "homepage": "https://liment1.github.io/PTI-UAS-SM2",
   "version": "0.1.0",
-  "homepage": "https://gr1c.github.io/PTI-UAS-SM2",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
@@ -30,9 +29,7 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
