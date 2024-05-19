@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import useFoodFetch from "../components/foodList";
 import longLat from "./LongLat"
+import { Link } from "react-router-dom";
 
 function Desk3() {
   const [currFood, setcurrFood] = useState({});
@@ -33,8 +34,8 @@ function Desk3() {
     <div className="foodDetails">
       {foodList && <DescComp name={currFood.name} link={imageList[index]} desc={currFood.description} longLat={longLat[id]} />}
       <div className="d-flex justify-content-center tombol">
-        <button><a href={`/foods/${(id + 11) % 12}`} className="learn-more" onClick={subIndex}><span className="bn31span">Prev</span></a></button>
-        <button><a href={`/foods/${(id + 13) % 12}`} className="learn-more" onClick={addIndex}><span className="bn31span">Next</span></a></button>
+        <button><Link to={`/foods/${(id + 11) % 12}`} className="learn-more" onClick={subIndex}><span className="bn31span">Prev</span></Link></button>
+        <button><Link to={`/foods/${(id + 13) % 12}`} className="learn-more" onClick={addIndex}><span className="bn31span">Next</span></Link></button>
       </div>
     </div>
   );

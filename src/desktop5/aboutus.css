@@ -194,7 +194,7 @@ a {
       rgba(0, 0, 0, 1),
       rgba(0, 0, 0, 0)
     ),
-    url("/public/images/bgabout.png");
+    url("/src/images/bgabout.png");
 
   background-color: rgba(0, 0, 0, 0.5);
   background-position: center;

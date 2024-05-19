@@ -1,9 +1,18 @@
-import { HashRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import Desktop1 from "./desktop1/desktop1.js";
+import Desktop2 from "./desktop2/desktop2.js";
+import Desktop3 from "./desktop3/Desk3.js";
+import Desktop4 from "./desktop4/desktop4.js";
+import AboutUs from "./desktop5/aboutus.js";
+import Navbar from "./navbar/navbar.js";
+import Footer from "./footer/footer";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
     return (
         <div className="container mw-100">
-            <HashRouter>
+            <BrowserRouter basename="/PTI-UAS-SM2">
                 <Routes>
                     <Route path="/" element={<Navbar />}>
                         <Route
@@ -35,7 +44,7 @@ function App() {
                         />
                     </Route>
                 </Routes>
-            </HashRouter>
+            </BrowserRouter>
         </div>
     );
 }

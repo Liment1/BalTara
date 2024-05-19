@@ -2,10 +2,10 @@ import React, { useEffect } from "react";
 import "./aboutus.css";
 import Swiper from "swiper";
 import Footer from "../footer/footer";
-import richie from "../images/richie.png";
-import ricat from "../images/ricat.png";
-import weli from "../images/weli.png";
-import keisen from "../images/keisen.png";
+import richie from "../images/richie.jpg";
+import ricat from "../images/ricat.jpg";
+import weli from "../images/weli.jpg";
+import keisen from "../images/keisen.jpg";
 
 
 const AboutUs = () => {
