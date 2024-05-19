@@ -12,9 +12,9 @@ import Footer from "./footer/footer";
 function App() {
   return (
     <div className="container mw-100">
-      <BrowserRouter basename="/PTI-UAS-SM2/">
+      <BrowserRouter basename="/PTI-UAS-SM2">
         <Routes>
-          <Route path="/" element={<Navbar />}>
+          <Route path="/PTI-UAS-SM2" element={<Navbar />}>
             <Route
               index
               element={
