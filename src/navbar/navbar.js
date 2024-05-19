@@ -8,6 +8,7 @@ import abtus from "./abtus.png";
 import support from "./support.png";
 import iconbali from "./iconbali.png";
 import { Outlet, Link } from "react-router-dom";
+import SoundApp from "../sounds/soundapp";
 
 function App() {
   const [showOffcanvas, setShowOffcanvas] = useState(false);
@@ -22,15 +23,39 @@ function App() {
 
   return (
     <div className="jancoks">
+      <SoundApp />
       {!showOffcanvas && (
-        <button
-          className="btn buttonnav btn-secondary"
-          type="button"
-          onClick={handleOffcanvasToggle}
-        >
-          <img src={iconbali} alt="iconbali" />
-        </button>
+        <a style={{ "--clr": "#7808d0" }} className="button" href="#" onClick={handleOffcanvasToggle}>
+          <span className="button__icon-wrapper">
+            <svg
+              width="10"
+              className="button__icon-svg"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 14 15"
+            >
+              <path
+                fill="currentColor"
+                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+              ></path>
+            </svg>
+            <svg
+              className="button__icon-svg button__icon-svg--copy"
+              xmlns="http://www.w3.org/2000/svg"
+              width="10"
+              fill="none"
+              viewBox="0 0 14 15"
+            >
+              <path
+                fill="currentColor"
+                d="M13.376 11.552l-.264-10.44-10.44-.24.024 2.28 6.96-.048L.2 12.56l1.488 1.488 9.432-9.432-.048 6.912 2.304.024z"
+              ></path>
+            </svg>
+          </span>
+          Menu
+        </a>
       )}
+      
 
       <Offcanvas
         show={showOffcanvas}

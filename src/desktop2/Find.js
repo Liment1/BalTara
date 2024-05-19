@@ -7,7 +7,6 @@ export default function Search({ foodList, setFoodList }) {
             setFoodList(foodList);
         } else {
             setFoodList(
-
                 foodList.filter(food =>
                     food.jenis.toLowerCase().includes(event.target.value.toLowerCase())
                 )

@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import "./desktop4.css";
-import Swal from "sweetalert2";
 
 const Contact = () => {
   const form = useRef();
@@ -9,27 +8,15 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    // Mengambil nilai dari formulir
     const formData = new FormData(form.current);
     const userName = formData.get("user_name");
     const userIg = formData.get("user_ig");
     const message = formData.get("message");
 
+    // Validasi: pastikan semua input diisi
     if (!userName || !userIg || !message) {
-      const Toast = Swal.mixin({
-        toast: true,
-        position: "top-end",
-        showConfirmButton: false,
-        timer: 3000,
-        timerProgressBar: true,
-        didOpen: (toast) => {
-          toast.onmouseenter = Swal.stopTimer;
-          toast.onmouseleave = Swal.resumeTimer;
-        }
-      });
-      Toast.fire({
-        icon: "warning",
-        title: "Harap isi semua kolom!"
-      });
+      alert("Silakan isi semua kolom sebelum mengirim.");
       return;
     }
 
@@ -43,41 +30,13 @@ const Contact = () => {
       .then(
         (result) => {
           console.log(result.text);
-          const Toast = Swal.mixin({
-            toast: true,
-            position: "top-end",
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-              toast.onmouseenter = Swal.stopTimer;
-              toast.onmouseleave = Swal.resumeTimer;
-            }
-          });
-          Toast.fire({
-            icon: "success",
-            title: "Terima kasih sarannya orang baik!"
-          });
+          alert("Pesan berhasil dikirim!");
           // Mengosongkan formulir setelah pesan berhasil dikirim
           form.current.reset();
         },
         (error) => {
           console.log(error.text);
-          const Toast = Swal.mixin({
-            toast: true,
-            position: "top-end",
-            showConfirmButton: false,
-            timer: 3000,
-            timerProgressBar: true,
-            didOpen: (toast) => {
-              toast.onmouseenter = Swal.stopTimer;
-              toast.onmouseleave = Swal.resumeTimer;
-            }
-          });
-          Toast.fire({
-            icon: "failed",
-            title: "Terjadi kesalahan!"
-          });
+          alert("Terjadi kesalahan saat mengirim pesan.");
         }
       );
   };

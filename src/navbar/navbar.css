@@ -89,12 +89,12 @@ body {
 }
 
 .offcanvas {
-    background-color: rgba(32, 30, 30, 0.8); 
-    color: white; 
+    background-color: rgba(32, 30, 30, 0.8);
+    color: white;
     width: 300px;
 }
 
-.logo img{
+.logo img {
     width: 50px;
     height: 50px;
     text-align: center;
@@ -103,22 +103,22 @@ body {
 }
 
 .custom-offcanvas {
-    max-width: 200px; 
+    max-width: 200px;
 }
 
 .offcanvas-header.logo {
-    width: 100%; 
+    width: 100%;
     margin-top: 20px;
 }
 
 .offcanvas-header.logo img {
-    width: 40px; 
-    margin: 0 auto; 
+    width: 40px;
+    margin: 0 auto;
     display: block;
 }
 
 .offcanvas-header .offcanvas-title {
-    text-align: center; 
+    text-align: center;
     font-size: 30px;
     margin-top: 10px;
     font-family: 'Poppins', sans-serif;
@@ -132,17 +132,17 @@ body {
 }
 
 .custom-search {
-    background-color: rgba(32, 30, 30, 0.8); 
-    border: none; 
+    background-color: rgba(32, 30, 30, 0.8);
+    border: none;
     border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-.custom-search::placeholder{
+.custom-search::placeholder {
     color: white;
 }
 
-.offcanvas-body h3{
+.offcanvas-body h3 {
     text-align: center;
     font-family: 'Poppins', sans-serif;
 }
@@ -155,7 +155,7 @@ body {
     border: none;
     padding: 0;
     cursor: pointer;
-    margin-top: 0px; 
+    margin-top: 0px;
 }
 
 .mainmenu .btn-home img {
@@ -171,7 +171,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.btn-home span:hover{
+.btn-home span:hover {
     text-decoration: underline;
 }
 
@@ -199,7 +199,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.btn-foods span:hover{
+.btn-foods span:hover {
     text-decoration: underline;
 }
 
@@ -228,7 +228,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.btn-abtus span:hover{
+.btn-abtus span:hover {
     text-decoration: underline;
 }
 
@@ -257,18 +257,18 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-.btn-support span:hover{
+.btn-support span:hover {
     text-decoration: underline;
 }
 
-.logo2 img{
+.logo2 img {
     width: 40px;
     height: 40px;
     margin-left: 50px;
 }
 
 /* iconbali */
-.btn-secondary img{
+.btn-secondary img {
     background-color: transparent;
     border: none;
     padding: 0;
@@ -292,7 +292,7 @@ body {
         width: 200px;
     }
 
-    .logo img{
+    .logo img {
         width: 40px;
         height: 40px;
         margin-right: 15px;
@@ -333,18 +333,23 @@ body {
 .musik {
     background-color: #222831;
     margin-top: 20px;
-    margin-left: 25px; 
+    margin-left: 25px;
     color: white;
 }
 
-.musik:hover{
+.musik:hover {
     background-color: black;
 }
 
 .mainmenu {
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
-.menu{
+.menu {
     margin-top: 0px;
+}
+
+.play {
+    margin-top: 20px;
+    margin-left: 10px;
 }

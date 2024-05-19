@@ -13,11 +13,9 @@ import tepeng2 from "./tepeng2.jpg";
 import sateplecing from "./sateplecing.jpg";
 import sambalembe from "./sambalembe.jpg";
 import Youtube from "../youtube/yt.js";
-import SoundApp from "../sounds/soundapp.js";
 
 function Desktop1() {
   const [currentSlide, setCurrentSlide] = useState(0);
-  // Change to false initially
   const slides = [nascam, babigul, ayambetu, satelilit];
   const slides2 = [lawar2, matah1, bebekgor, satebab];
   const slides3 = [tipatblayag, tepeng2, sateplecing, sambalembe];
@@ -92,13 +90,7 @@ function Desktop1() {
     <div className="desktop1">
       <div className="clock">
         <div id="MyClockDisplay" className="clockdalam"></div>
-        <SoundApp />
       </div>
-
-      <div className="judul">
-        <h1 className="judulhome">Home</h1>
-      </div>
-
       <div className="baltara" style={{ cursor: "default" }}>
         <p className="baltaraText">{baltaraText}</p>
       </div>
