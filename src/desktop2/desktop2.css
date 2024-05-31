@@ -33,7 +33,10 @@
   margin-left: 10vw;
   text-shadow: 0.1vw 0.1vw 0.2vw rgba(0, 0, 0, 0.5);
   margin-top: 20px;
-  overflow: hidden; 
+  overflow: hidden;
+  padding-top: 30px;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 .descrip {
@@ -160,3 +163,7 @@
   padding-bottom: 5px;
 }
 
+#foodtitle {
+  font-size: 5rem;
+  margin-bottom: 0.5em;
+}

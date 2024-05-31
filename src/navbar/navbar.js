@@ -6,7 +6,6 @@ import home from "./home.png";
 import foods from "./restaurant.png";
 import abtus from "./abtus.png";
 import support from "./support.png";
-import iconbali from "./iconbali.png";
 import { Outlet, Link } from "react-router-dom";
 import SoundApp from "../sounds/soundapp";
 
@@ -25,7 +24,7 @@ function App() {
     <div className="jancoks">
       <SoundApp />
       {!showOffcanvas && (
-        <a style={{ "--clr": "#7808d0" }} className="button" href="#" onClick={handleOffcanvasToggle}>
+        <a style={{ "--clr": "#7808d0" }} className="button" onClick={handleOffcanvasToggle}>
           <span className="button__icon-wrapper">
             <svg
               width="10"

@@ -21,6 +21,10 @@ function Desktop1() {
   const slides3 = [tipatblayag, tepeng2, sateplecing, sambalembe];
   const [baltaraText, setBaltaraText] = useState("Bali Nusantara");
 
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[]);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % slides.length);
@@ -76,7 +80,7 @@ function Desktop1() {
 
     window.onscroll = function() {
       if (window.pageYOffset > 0) {
-        let opac = 1 - (((window.pageYOffset) * (window.pageYOffset) / (nystories *1000 )));
+        let opac = 1 - (((window.pageYOffset) * (window.pageYOffset) * (window.pageYOffset)  / (nystories * 450000 )));
         if (opac < 0) opac = 0;
           background.style.opacity = opac;
       } else {

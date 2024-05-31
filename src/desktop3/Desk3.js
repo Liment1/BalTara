@@ -15,6 +15,7 @@ function Desk3() {
   const [index, setIndx] = useState(id);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     if (foodList.length > 0) {
       setcurrFood(foodList.find(food => {
         return Number(food.id) === index;

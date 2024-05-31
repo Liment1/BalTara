@@ -6,13 +6,13 @@ import Desktop4 from "./desktop4/desktop4.js";
 import AboutUs from "./desktop5/aboutus.js";
 import Navbar from "./navbar/navbar.js";
 import Footer from "./footer/footer";
+import { HashRouter, Route, Routes } from "react-router-dom";
 
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
     return (
         <div className="container mw-100">
-            <BrowserRouter basename="/PTI-UAS-SM2">
+            <HashRouter>
                 <Routes>
                     <Route path="/" element={<Navbar />}>
                         <Route
@@ -44,7 +44,7 @@ function App() {
                         />
                     </Route>
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </div>
     );
 }

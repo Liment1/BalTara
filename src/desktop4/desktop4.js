@@ -1,9 +1,13 @@
-import React, { useRef } from "react";
+import React, {useEffect, useRef} from "react";
 import emailjs from "@emailjs/browser";
 import "./desktop4.css";
 
 const Contact = () => {
   const form = useRef();
+
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[]);
 
   const sendEmail = (e) => {
     e.preventDefault();

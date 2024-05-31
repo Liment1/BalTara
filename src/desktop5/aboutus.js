@@ -9,6 +9,10 @@ import keisen from "../images/keisen.jpg";
 
 
 const AboutUs = () => {
+  useEffect(()=>{
+    window.scrollTo(0, 0);
+  },[]);
+
   useEffect(() => {
     const swiper = new Swiper(".mySwiper", {
       effect: "coverflow",

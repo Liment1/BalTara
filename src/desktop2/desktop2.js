@@ -11,7 +11,6 @@ function Desktop2() {
     const { foodF: startFoodList, loading, error } = useFoodFetch();
     const [foodList, setFoodList] = useState(startFoodList);
     const [renderKey, setRenderKey] = useState(Date.now()); // State to force re-render
-
     const checkVisibility = () => {
         const pageTop = document.documentElement.scrollTop || document.body.scrollTop;
         const pageBottom = pageTop + window.innerHeight;
@@ -29,7 +28,6 @@ function Desktop2() {
     };
 
     useEffect(() => {
-        // Check visibility whenever foodList changes
         checkVisibility();
     }, [foodList]);
 
@@ -62,7 +60,7 @@ function Desktop2() {
     return (
         <div className="desktop2">
             <center>
-                <h1>Foods</h1>
+                <h1 id="foodtitle">Foods</h1>
             </center>
             <div className="find d-flex justify-content-around">
                 <Search foodList={startFoodList} setFoodList={setFoodList} />
@@ -85,7 +83,7 @@ function Desktop2() {
                         </div>
                     ))}
             </div>
-           
+
         </div>
     );
 }
