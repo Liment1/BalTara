@@ -5,6 +5,7 @@ const containerStyle = {
     width: '800px',
     height: '400px'
 };
+const apikey = process.env.maps_api_key;
 const options = { closeBoxURL: '', enableEventPropagation: true };
 
 const onLoad = marker => {
@@ -23,7 +24,7 @@ function MyComponent({longLat}) {
     return (
 
         <LoadScript
-            googleMapsApiKey="AIzaSyDelBTV6rpLRtOD4IJ0FwkHPUTSjSl4yO8"
+            googleMapsApiKey= {apikey}
         >
             <GoogleMap
                 mapContainerStyle={containerStyle}

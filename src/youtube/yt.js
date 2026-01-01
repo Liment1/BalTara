@@ -15,7 +15,7 @@ function Youtube() {
     }
 
     useEffect(() => {
-        var apiKey = 'AIzaSyBXbCHbXIl31rw8oe3OvqZ-5ft0mH-n5s8';
+        var apiKey = 'AIzaSyCgDts0exSqN43i5cUJIn4GSi4w7JE87ks';
         var videoId = 'zHcr32gRRCs';
         loadYouTubeVideo(apiKey, videoId);
     }, []);
