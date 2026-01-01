@@ -5,7 +5,7 @@ const containerStyle = {
     width: '800px',
     height: '400px'
 };
-const apikey = process.env.maps_api_key;
+const apikey = process.env.REACT_APP_MAPS_API_KEY;
 const options = { closeBoxURL: '', enableEventPropagation: true };
 
 const onLoad = marker => {
@@ -29,7 +29,7 @@ function MyComponent({longLat}) {
             <GoogleMap
                 mapContainerStyle={containerStyle}
                 center={center}
-                zoom={20    }
+                zoom={20}
             >
                 <Marker
                     onLoad={onLoad}

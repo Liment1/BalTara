@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 
 function Youtube() {
+   
+    const apikey = process.env.REACT_APP_YOUTUBE_API_KEY;
+     
+    
     function loadYouTubeVideo(apiKey, videoId) {
         var url = `https://www.googleapis.com/youtube/v3/videos?part=player&id=${videoId}&key=${apiKey}`;
 
@@ -15,10 +19,9 @@ function Youtube() {
     }
 
     useEffect(() => {
-        var apiKey = 'AIzaSyCgDts0exSqN43i5cUJIn4GSi4w7JE87ks';
         var videoId = 'zHcr32gRRCs';
-        loadYouTubeVideo(apiKey, videoId);
-    }, []);
+        loadYouTubeVideo(apikey, videoId);
+    }, [apikey]);
 
     return (
         <div id="player">
