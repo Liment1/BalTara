@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# BalTara (Bali Nusantara)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![Platform](https://img.shields.io/badge/platform-web-orange)
 
-## Available Scripts
+## Description
+Bali Nusantara is a React-based web application designed to immerse users in the culture of Bali, Indonesia. It serves as a comprehensive digital guide for food reccomendations, featuring:
+* **Curated Video Content:** Dynamic video feeds powered by the YouTube Data API.
+* **Geographic Context:** Interactive maps highlighting location of the given food via Google Maps.
+* **Culinary Heritage:** A catalog of traditional Balinese foods, sourced from a custom JSON data repository.
 
-In the project directory, you can run:
+**Target Audience:** Tourists, cultural enthusiasts, and researchers looking for a centralized platform to explore Balinese culture, geography, and cuisine.
 
-### `npm start`
+[**Live Production Site**](http://baltara.me)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Table of Contents
+- [Description](#description)
+- [Architecture](#architecture)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+- [Usage](#usage)
+- [Deployment](#deployment)
+- [License](#license)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Architecture
 
-### `npm test`
+**Core Framework:**
+* **Frontend:** React (v18.3.1)
+* **Routing:** React Router DOM (v6.x)
+* **Build Tool:** Create React App
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**Data Sources & APIs:**
+* **Video Content:** Google YouTube Data API v3
+* **Maps & Location:** Google Maps JavaScript API
+* **Culinary Data:** Static JSON API (Hosted on GitHub)
 
-### `npm run build`
+**UI & Styling:**
+* **Framework:** Bootstrap (v5.3.3) & React-Bootstrap
+* **Components:** Swiper (Carousel), SweetAlert2 (Modals)
+* **Visuals:** React Wavify
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Prerequisites
+Ensure the following tools are installed in your development environment:
+* **Node.js**: v18.x or v20.x (LTS recommended)
+* **npm**: v9.x or higher
+* **Git**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1.  **Clone the repository**
+    ```bash
+    git clone [https://github.com/Liment1/BalTara.git](https://github.com/Liment1/BalTara.git)
+    cd BalTara
+    ```
 
-### `npm run eject`
+2.  **Install dependencies**
+    ```bash
+    npm install
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Configuration
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This application requires API keys for Google services.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1.  **Create Environment File:**
+    ```bash
+    touch .env
+    ```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2.  **Add API Keys:**
+    Open `.env` and add your keys (prefix `REACT_APP_` is required):
+    ```env
+    REACT_APP_YOUTUBE_API_KEY=your_youtube_key_here
+    REACT_APP_MAPS_API_KEY=your_maps_key_here
+    ```
+    *(Note: The Food Data JSON source is public and does not require an API key.)*
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Development Server**
+Runs the app in development mode.
+```bash
+npm start
