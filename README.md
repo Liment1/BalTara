@@ -1,7 +1,6 @@
 # BalTara (Bali Nusantara)
 
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
-![License](https://img.shields.io/badge/license-MIT-blue)
 ![Platform](https://img.shields.io/badge/platform-web-orange)
 
 ## Description
@@ -12,6 +11,7 @@ Bali Nusantara is a React-based web application designed to immerse users in the
 
 **Target Audience:** Tourists, cultural enthusiasts, and researchers looking for a centralized platform to explore Balinese culture, geography, and cuisine.
 
+![BalTara App Screenshot](./assets/home.png)
 [**Live Production Site**](http://baltara.me)
 
 ## Table of Contents
@@ -22,7 +22,6 @@ Bali Nusantara is a React-based web application designed to immerse users in the
 - [Configuration](#configuration)
 - [Usage](#usage)
 - [Deployment](#deployment)
-- [License](#license)
 
 ## Architecture
 
@@ -83,3 +82,26 @@ This application requires API keys for Google services.
 Runs the app in development mode.
 ```bash
 npm start
+```
+
+## Deployment
+
+This project is configured for continuous deployment using **GitHub Pages**.
+
+**Configuration Details:**
+* **Source Branch:** `gh-pages` (automatically generated).
+* **Custom Domain:** [baltara.me](http://baltara.me)
+* **Workflow:** GitHub Actions (`pages-build-deployment`).
+
+**How to Deploy Updates:**
+1.  Ensure your changes are committed to the `main` branch.
+2.  Run the deployment script:
+    ```bash
+    npm run deploy
+    ```
+3.  This script will:
+    * Create a production build of the application.
+    * Push the build artifacts to the `gh-pages` branch.
+    * Trigger the GitHub Actions workflow to update the live site.
+
+*Note: DNS changes for the custom domain may take a few minutes to propagate after the initial setup.*
